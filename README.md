@@ -7,4 +7,4 @@ De Expertisegroep Business Rule Management (BRM, zie: https://expertisegroep-brm
 
 De functionele specificatie van de regels voor de Subsidieregeling lerarenbeurs (incl. relevante regels voor de AVG!) worden door een lid van deze Expertisegroep in nauwe samenwerking met een marktpartij uitgewerkt. Daarbij wordt gebruik gemaakt van Formal Language for the Interpretation of Normative Theories (FLINT, zie: http://delaat.net/sarnet/2016-12-14-Jurix2016.pdf).
 
-In het operationele proces wordt Agile Scrum gewerkt. In dit proces gaat het om het technisch realiseren van een werkende blockchain toepassing. Er zullen sprints gehanteerd worden van drie weken. Elke week is er een terugblik door het Dagdagelijkse team. Elke drie weken, na beëindiging van de sprint, zal er een refinement en een demo plaatsvinden. Hierbij zijn alle leden van het scrum team aanwezig. Locatie zal bij ICTU in Den Haag zijn.
+In het operationele proces wordt Agile Scrum gewerkt. In dit proces gaat het om het technisch realiseren van een werkende blockchain toepassing. Er zullen sprints gehanteerd worden van drie weken.
