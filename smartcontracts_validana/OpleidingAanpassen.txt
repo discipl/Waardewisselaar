@@ -1,0 +1,79 @@
+Type: OpleidingAanpassen
+Version: 1.0
+Description: Opleider past de eigenschappen van een opleiding aan.
+Template: {"opleiding":{"type":"hash","desc":"De opleiding om aan te passen.","name":"Opleiding"},"eigenschappen":{"type":"json","desc":"Aanpassingen.","name":"Aanpassingen"}}
+Init: 
+Code: Ly9IdWlkaWdlIGVpZ2Vuc2NoYXBwZW4KY29uc3QgYmluYXJ5T3BsZWlkaW5nID0gQnVmZmVyLmZyb20ocGF5bG9hZC5vcGxlaWRpbmcsICJoZXgiKTsKY29uc3Qgb3BsZWlkaW5nID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAib3BsZWlkaW5nZW4iLCAiV0hFUkUgaWQgPSAkMTsiLCBbYmluYXJ5T3BsZWlkaW5nXSkpLnJvd3NbMF07CmlmIChvcGxlaWRpbmcgPT09IHVuZGVmaW5lZCkgewogICAgcmV0dXJuICJPcGxlaWRpbmcgYmVzdGFhdCBuaWV0LiI7Cn0KLy9BbGxlZW4gb3BsZWlkZXIgbWFnIGRvY2VudGVuIGFhbnBhc3NlbiBvcCBzb21taWdlIHZlbGRlbgpjb25zdCBvcGxlaWRlckNoZWNrID0gKCkgPT4gewogICAgcmV0dXJuIG9wbGVpZGluZy5vcGxlaWRlciA9PT0gZnJvbTsKfTsKLy9BbGxlZW4gZHVvIG1hZyBkb2NlbnRlbiBhYW5wYXNzZW4gb3Agc29tbWlnZSB2ZWxkZW4KbGV0IGlzRHVvOwpjb25zdCBkdW9DaGVjayA9IGFzeW5jICgpID0+IHsKICAgIGlmIChpc0R1byA9PT0gdW5kZWZpbmVkKSB7CiAgICAgICAgY29uc3QgZHVvID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAiZW50aXRlaXRlbiIsICJXSEVSRSBpZCA9ICdEVU8nOyIsIFtdKSkucm93c1swXTsKICAgICAgICBpc0R1byA9IGR1byAhPT0gdW5kZWZpbmVkICYmIGR1by5hZGRyZXNzID09PSBmcm9tOwogICAgfQogICAgcmV0dXJuIGlzRHVvOwp9OwovL05pZXV3ZSBlaWdlbnNjaGFwcGVuCmNvbnN0IG5ld1NldHRpbmdzID0gSlNPTi5wYXJzZShwYXlsb2FkLmVpZ2Vuc2NoYXBwZW4pOwppZiAodHlwZW9mIG5ld1NldHRpbmdzICE9PSAib2JqZWN0IiB8fCBuZXdTZXR0aW5ncyA9PT0gbnVsbCkgewogICAgcmV0dXJuICJPbmdlbGRpZ2UgZWlnZW5zY2hhcHBlbiI7Cn0KLy9LaWprIG9mIGFhbmdlcGFzdGUgZWlnZW5zY2hhcHBlbiBkb29yIGRlIGp1aXN0ZSBnZWJydWlrZXIgd29yZGVuIGFhbmdlcGFzdCBlbiBnZWxkaWcgemlqbgpmb3IgKGNvbnN0IGtleSBvZiBPYmplY3Qua2V5cyhuZXdTZXR0aW5ncykpIHsKICAgIHN3aXRjaCAoa2V5KSB7CiAgICAgICAgLy9VQzEuUjQKICAgICAgICBjYXNlICJiYWNoZWxvciI6IC8vQjAwNC5CUjAyLjEgJiBCNDAyLkJSMDIuMgogICAgICAgIGNhc2UgIm1hc3RlciI6IC8vQjAwNC5CUjAyLjIgJiBCNDAyLkJSMDIuMgogICAgICAgIGNhc2UgImRlZmljacOrbnRpZW9wbGVpZGluZyI6IC8vQjAwNC5CUjAyLjMgJiBCNDAyLkJSMDIuMgogICAgICAgICAgICBpZiAodHlwZW9mIG5ld1NldHRpbmdzW2tleV0gIT09ICJib29sZWFuIiB8fCAhb3BsZWlkZXJDaGVjaygpIHx8IG9wbGVpZGluZy5laWdlbnNjaGFwcGVuLmFhbnBhc3NlblN0YXAgPT09IDIpIHsKICAgICAgICAgICAgICAgIHJldHVybiAiT25nZWxkaWdlIGVpZ2Vuc2NoYXBwZW4gb2YgZ2VicnVpa2VyIG9mIG1hZyBuaWV0IG1lZXIgYWFucGFzc2VuIjsKICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIHsKICAgICAgICAgICAgICAgIG9wbGVpZGluZy5laWdlbnNjaGFwcGVuLmFhbnBhc3NlblN0YXAgPSAxOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGJyZWFrOwogICAgICAgIGNhc2UgIkVDIjogLy9CMDAzLkJSMDIgJiBCMDAzLkJSMDcKICAgICAgICAgICAgaWYgKHR5cGVvZiBuZXdTZXR0aW5nc1trZXldICE9PSAibnVtYmVyIiB8fCAhb3BsZWlkZXJDaGVjaygpIHx8IG9wbGVpZGluZy5laWdlbnNjaGFwcGVuLmFhbnBhc3NlblN0YXAgPT09IDIpIHsKICAgICAgICAgICAgICAgIHJldHVybiAiT25nZWxkaWdlIGVpZ2Vuc2NoYXBwZW4gb2YgZ2VicnVpa2VyIG9mIG1hZyBuaWV0IG1lZXIgYWFucGFzc2VuIjsKICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIHsKICAgICAgICAgICAgICAgIG9wbGVpZGluZy5laWdlbnNjaGFwcGVuLmFhbnBhc3NlblN0YXAgPSAxOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGJyZWFrOwogICAgICAgIC8vVUMxLlI1CiAgICAgICAgY2FzZSAiaW5OZWRlcmxhbmQiOiAvL0IwMDQuQlIwMy4xCiAgICAgICAgY2FzZSAiaW5FVSI6IC8vQjAwNC5CUjAzLjIKICAgICAgICBjYXNlICJpbkFydWJhIjogLy9CMDA0LkJSMDMuMwogICAgICAgIGNhc2UgImluU2ludE1hYXJ0ZW4iOiAvL0IwMDQuQlIwMy40CiAgICAgICAgY2FzZSAiaW5DdXJhw6dhbyI6IC8vQjAwNC5CUjAzLjUKICAgICAgICBjYXNlICJOdWZmaWNHZWxpamt3YWFyZGlnVmVya2xhYXJkZUJ1aXRlbmxhbmRzIjogLy9CMDA0LkJSMDQuMQogICAgICAgIGNhc2UgIk5WT2dlYWNjcmVkaXRlZXJkIjogLy9CMDA0LkJSMDQuMgogICAgICAgICAgICBpZiAodHlwZW9mIG5ld1NldHRpbmdzW2tleV0gIT09ICJib29sZWFuIiB8fCAhYXdhaXQgZHVvQ2hlY2soKSB8fCBvcGxlaWRpbmcuZWlnZW5zY2hhcHBlbi5hYW5wYXNzZW5TdGFwID09PSB1bmRlZmluZWQpIHsKICAgICAgICAgICAgICAgIHJldHVybiAiT25nZWxkaWdlIGVpZ2Vuc2NoYXBwZW4gb2YgZ2VicnVpa2VyIG9mIG1hZyBub2cgbmlldCBhYW5wYXNzZW4iOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgb3BsZWlkaW5nLmVpZ2Vuc2NoYXBwZW4uYWFucGFzc2VuU3RhcCA9IDI7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgZGVmYXVsdDoKICAgICAgICAgICAgcmV0dXJuICJPbmdlbGRpZ2UgZWlnZW5zY2hhcCI7CiAgICB9Cn0KLy9FaWdlbnNjaGFwcGVuIHVwZGF0ZW4KT2JqZWN0LmFzc2lnbihvcGxlaWRpbmcuZWlnZW5zY2hhcHBlbiwgbmV3U2V0dGluZ3MpOwphd2FpdCBxdWVyeSgiVVBEQVRFIiwgIm9wbGVpZGluZ2VuIiwgIlNFVCBlaWdlbnNjaGFwcGVuID0gJDIgV0hFUkUgaWQgPSAkMTsiLCBbYmluYXJ5T3BsZWlkaW5nLCBKU09OLnN0cmluZ2lmeShvcGxlaWRpbmcuZWlnZW5zY2hhcHBlbildKTsKcmV0dXJuICJPSyI7
+
+Init as text:
+
+Code as text:
+//Huidige eigenschappen
+const binaryOpleiding = Buffer.from(payload.opleiding, "hex");
+const opleiding = (await query("SELECT", "opleidingen", "WHERE id = $1;", [binaryOpleiding])).rows[0];
+if (opleiding === undefined) {
+    return "Opleiding bestaat niet.";
+}
+//Alleen opleider mag docenten aanpassen op sommige velden
+const opleiderCheck = () => {
+    return opleiding.opleider === from;
+};
+//Alleen duo mag docenten aanpassen op sommige velden
+let isDuo;
+const duoCheck = async () => {
+    if (isDuo === undefined) {
+        const duo = (await query("SELECT", "entiteiten", "WHERE id = 'DUO';", [])).rows[0];
+        isDuo = duo !== undefined && duo.address === from;
+    }
+    return isDuo;
+};
+//Nieuwe eigenschappen
+const newSettings = JSON.parse(payload.eigenschappen);
+if (typeof newSettings !== "object" || newSettings === null) {
+    return "Ongeldige eigenschappen";
+}
+//Kijk of aangepaste eigenschappen door de juiste gebruiker worden aangepast en geldig zijn
+for (const key of Object.keys(newSettings)) {
+    switch (key) {
+        //UC1.R4
+        case "bachelor": //B004.BR02.1 & B402.BR02.2
+        case "master": //B004.BR02.2 & B402.BR02.2
+        case "deficiëntieopleiding": //B004.BR02.3 & B402.BR02.2
+            if (typeof newSettings[key] !== "boolean" || !opleiderCheck() || opleiding.eigenschappen.aanpassenStap === 2) {
+                return "Ongeldige eigenschappen of gebruiker of mag niet meer aanpassen";
+            }
+            else {
+                opleiding.eigenschappen.aanpassenStap = 1;
+            }
+            break;
+        case "EC": //B003.BR02 & B003.BR07
+            if (typeof newSettings[key] !== "number" || !opleiderCheck() || opleiding.eigenschappen.aanpassenStap === 2) {
+                return "Ongeldige eigenschappen of gebruiker of mag niet meer aanpassen";
+            }
+            else {
+                opleiding.eigenschappen.aanpassenStap = 1;
+            }
+            break;
+        //UC1.R5
+        case "inNederland": //B004.BR03.1
+        case "inEU": //B004.BR03.2
+        case "inAruba": //B004.BR03.3
+        case "inSintMaarten": //B004.BR03.4
+        case "inCuraçao": //B004.BR03.5
+        case "NufficGelijkwaardigVerklaardeBuitenlands": //B004.BR04.1
+        case "NVOgeaccrediteerd": //B004.BR04.2
+            if (typeof newSettings[key] !== "boolean" || !await duoCheck() || opleiding.eigenschappen.aanpassenStap === undefined) {
+                return "Ongeldige eigenschappen of gebruiker of mag nog niet aanpassen";
+            }
+            else {
+                opleiding.eigenschappen.aanpassenStap = 2;
+            }
+            break;
+        default:
+            return "Ongeldige eigenschap";
+    }
+}
+//Eigenschappen updaten
+Object.assign(opleiding.eigenschappen, newSettings);
+await query("UPDATE", "opleidingen", "SET eigenschappen = $2 WHERE id = $1;", [binaryOpleiding, JSON.stringify(opleiding.eigenschappen)]);
+return "OK";

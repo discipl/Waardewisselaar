@@ -1,0 +1,19 @@
+Type: Entiteit
+Version: 1.0
+Description: Voeg een nieuwe globale entiteit toe of wijzig deze.
+Template: {"entiteit":{"type":"str","desc":"De entiteit.","name":"Entiteit"},"address":{"type":"addr","desc":"Address van de entiteit.","name":"Address"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJlbnRpdGVpdGVuIiwgIihpZCBWQVJDSEFSKDY0KSBQUklNQVJZIEtFWSwgYWRkcmVzcyBWQVJDSEFSKDM1KSk7IiwgW10pOw==
+Code: aWYgKGZyb20gIT09IHByb2Nlc3NvcikgewogICAgcmV0dXJuICJPbmdlbGRpZ2UgZ2VicnVpa2VyIjsKfQppZiAocGF5bG9hZC5lbnRpdGVpdC5sZW5ndGggPT09IDAgfHwgcGF5bG9hZC5lbnRpdGVpdC5sZW5ndGggPiA2NCkgewogICAgcmV0dXJuICJPbmdlbGRpZ2UgZW50aXRlaXQgbmFhbS4iOwp9CmF3YWl0IHF1ZXJ5KCJJTlNFUlQiLCAiZW50aXRlaXRlbiIsICIoaWQsIGFkZHJlc3MpIFZBTFVFUyAoJDEsICQyKSBPTiBDT05GTElDVCBPTiBDT05TVFJBSU5UIGVudGl0ZWl0ZW5fcGtleSAiICsKICAgICJETyBVUERBVEUgU0VUIGFkZHJlc3MgPSAkMiBXSEVSRSBlbnRpdGVpdGVuLmlkID0gJDE7IiwgW3BheWxvYWQuZW50aXRlaXQsIHBheWxvYWQuYWRkcmVzc10pOwpyZXR1cm4gIk9LIjs=
+
+Init as text:
+await query("CREATE", "entiteiten", "(id VARCHAR(64) PRIMARY KEY, address VARCHAR(35));", []);
+Code as text:
+if (from !== processor) {
+    return "Ongeldige gebruiker";
+}
+if (payload.entiteit.length === 0 || payload.entiteit.length > 64) {
+    return "Ongeldige entiteit naam.";
+}
+await query("INSERT", "entiteiten", "(id, address) VALUES ($1, $2) ON CONFLICT ON CONSTRAINT entiteiten_pkey " +
+    "DO UPDATE SET address = $2 WHERE entiteiten.id = $1;", [payload.entiteit, payload.address]);
+return "OK";

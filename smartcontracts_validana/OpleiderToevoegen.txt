@@ -1,0 +1,23 @@
+Type: OpleiderToevoegen
+Version: 1.0
+Description: Duo voegt een nieuwe opleider toe of verwijderd een opleider.
+Template: {"opleider":{"type":"addr","desc":"De opleider om toe te voegen of te verwijderen.","name":"Opleider"},"toevoegen":{"type":"bool","desc":"Toevoegen of verwijderen.","name":"Toevoegen"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJvcGxlaWRlcnMiLCAiKGlkIFZBUkNIQVIoMzUpIFBSSU1BUlkgS0VZKTsiLCBbXSk7
+Code: Ly9BbGxlZW4gZHVvIG1hZyBlZW4gb3BsZWlkZXIgdG9ldm9lZ2VuCmNvbnN0IGR1byA9IChhd2FpdCBxdWVyeSgiU0VMRUNUIiwgImVudGl0ZWl0ZW4iLCAiV0hFUkUgaWQgPSAnRFVPJzsiLCBbXSkpLnJvd3NbMF07CmlmIChkdW8gPT09IHVuZGVmaW5lZCB8fCBmcm9tICE9PSBkdW8uYWRkcmVzcykgewogICAgcmV0dXJuICJPbmdlbGRpZ2UgZ2VicnVpa2VyIjsKfQppZiAocGF5bG9hZC50b2V2b2VnZW4pIHsKICAgIGF3YWl0IHF1ZXJ5KCJJTlNFUlQiLCAib3BsZWlkZXJzIiwgIihpZCkgVkFMVUVTICgkMSkgT04gQ09ORkxJQ1QgT04gQ09OU1RSQUlOVCBvcGxlaWRlcnNfcGtleSBETyBOT1RISU5HOyIsIFtwYXlsb2FkLm9wbGVpZGVyXSk7Cn0KZWxzZSB7CiAgICAvL1RPRE8KICAgIHJldHVybiAiSW4gaHVpZGlnZSB2ZXJzaWUga2FuIG9wbGVpZGVyIG5pZXQgdmVyd2lqZGVyZCB3b3JkZW4uIjsKfQpyZXR1cm4gIk9LIjs=
+
+Init as text:
+await query("CREATE", "opleiders", "(id VARCHAR(35) PRIMARY KEY);", []);
+Code as text:
+//Alleen duo mag een opleider toevoegen
+const duo = (await query("SELECT", "entiteiten", "WHERE id = 'DUO';", [])).rows[0];
+if (duo === undefined || from !== duo.address) {
+    return "Ongeldige gebruiker";
+}
+if (payload.toevoegen) {
+    await query("INSERT", "opleiders", "(id) VALUES ($1) ON CONFLICT ON CONSTRAINT opleiders_pkey DO NOTHING;", [payload.opleider]);
+}
+else {
+    //TODO
+    return "In huidige versie kan opleider niet verwijderd worden.";
+}
+return "OK";

@@ -1,0 +1,43 @@
+Type: DocentToevoegen
+Version: 1.0
+Description: School geef aan dat een docent (niet meer) bij hun werkt.
+Template: {"docent":{"type":"addr","desc":"De docent om toe te voegen of te verwijderen.","name":"Docent"},"toevoegen":{"type":"bool","desc":"Toevoegen of verwijderen.","name":"Toevoegen"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJkb2NlbnRlbiIsICIoaWQgVkFSQ0hBUigzNSkgUFJJTUFSWSBLRVksIGVpZ2Vuc2NoYXBwZW4gSlNPTkIgTk9UIE5VTEwgREVGQVVMVCAne30nLCAiCiAgICArICJ3ZXJrZ2V2ZXIgVkFSQ0hBUigzNSkgUkVGRVJFTkNFUyBzY2hvbGVuKGlkKSk7IiwgW10pOw==
+Code: Ly9BbGxlZW4gZWVuIHNjaG9vbCBtYWcgZWVuIGRvY2VudCB0b2V2b2VnZW4KY29uc3Qgc2Nob29sID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAic2Nob2xlbiIsICJXSEVSRSBpZCA9ICQxOyIsIFtmcm9tXSkpLnJvd3NbMF07CmlmIChzY2hvb2wgPT09IHVuZGVmaW5lZCkgewogICAgcmV0dXJuICJPbmdlbGRpZ2UgZ2VicnVpa2VyIjsKfQpjb25zdCBkb2NlbnQgPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJkb2NlbnRlbiIsICJXSEVSRSBpZCA9ICQxOyIsIFtwYXlsb2FkLmRvY2VudF0pKS5yb3dzWzBdOwppZiAocGF5bG9hZC50b2V2b2VnZW4pIHsKICAgIGlmIChkb2NlbnQgPT09IHVuZGVmaW5lZCkgewogICAgICAgIGF3YWl0IHF1ZXJ5KCJJTlNFUlQiLCAiZG9jZW50ZW4iLCAiKGlkLCB3ZXJrZ2V2ZXIpIFZBTFVFUyAoJDEsICQyKTsiLCBbcGF5bG9hZC5kb2NlbnQsIGZyb21dKTsKICAgIH0KICAgIGVsc2UgaWYgKGRvY2VudC53ZXJrZ2V2ZXIgPT09IG51bGwpIHsKICAgICAgICBkb2NlbnQud2Vya2dldmVyID0gZnJvbTsKICAgICAgICBhd2FpdCBxdWVyeSgiVVBEQVRFIiwgImRvY2VudGVuIiwgIlNFVCB3ZXJrZ2V2ZXIgPSAkMiBXSEVSRSBpZCA9ICQxOyIsIFtwYXlsb2FkLmRvY2VudCwgZG9jZW50LndlcmtnZXZlcl0pOwogICAgfQogICAgZWxzZSB7CiAgICAgICAgcmV0dXJuICJJbiBodWlkaWdlIHZlcnNpZSBrYW4gZG9jZW50IG1hYXIgMSB3ZXJrZ2V2ZXIgaGViYmVuLiI7CiAgICB9Cn0KZWxzZSB7CiAgICBpZiAoZG9jZW50ID09PSB1bmRlZmluZWQgfHwgZG9jZW50LndlcmtnZXZlciAhPT0gZnJvbSkgewogICAgICAgIHJldHVybiAiRG9jZW50IGlzIG5pZXQgaW4gZGllbnN0IGJpaiBnZWJydWlrZXIuIjsKICAgIH0KICAgIGVsc2UgewogICAgICAgIGlmIChkb2NlbnQuZWlnZW5zY2hhcHBlbi52ZXJsZWRlbkRpZW5zdHZlcmJhbmRlbiA9PT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgIGRvY2VudC5laWdlbnNjaGFwcGVuLnZlcmxlZGVuRGllbnN0dmVyYmFuZGVuID0gW107CiAgICAgICAgfQogICAgICAgIGRvY2VudC5laWdlbnNjaGFwcGVuLnZlcmxlZGVuRGllbnN0dmVyYmFuZGVuLnB1c2goeyBlaW5kRGF0dW06IHByZXZpb3VzQmxvY2tUaW1lc3RhbXAsIHdlcmtnZXZlcjogZG9jZW50LndlcmtnZXZlciB9KTsKICAgICAgICBkb2NlbnQud2Vya2dldmVyID0gbnVsbDsKICAgICAgICBhd2FpdCBxdWVyeSgiVVBEQVRFIiwgImRvY2VudGVuIiwgIlNFVCBlaWdlbnNjaGFwcGVuID0gJDIsIHdlcmtnZXZlciA9ICQzIFdIRVJFIGlkID0gJDE7IiwgW3BheWxvYWQuZG9jZW50LCBKU09OLnN0cmluZ2lmeShkb2NlbnQuZWlnZW5zY2hhcHBlbiksIGRvY2VudC53ZXJrZ2V2ZXJdKTsKICAgIH0KfQpyZXR1cm4gIk9LIjs=
+
+Init as text:
+await query("CREATE", "docenten", "(id VARCHAR(35) PRIMARY KEY, eigenschappen JSONB NOT NULL DEFAULT '{}', "
+    + "werkgever VARCHAR(35) REFERENCES scholen(id));", []);
+Code as text:
+//Alleen een school mag een docent toevoegen
+const school = (await query("SELECT", "scholen", "WHERE id = $1;", [from])).rows[0];
+if (school === undefined) {
+    return "Ongeldige gebruiker";
+}
+const docent = (await query("SELECT", "docenten", "WHERE id = $1;", [payload.docent])).rows[0];
+if (payload.toevoegen) {
+    if (docent === undefined) {
+        await query("INSERT", "docenten", "(id, werkgever) VALUES ($1, $2);", [payload.docent, from]);
+    }
+    else if (docent.werkgever === null) {
+        docent.werkgever = from;
+        await query("UPDATE", "docenten", "SET werkgever = $2 WHERE id = $1;", [payload.docent, docent.werkgever]);
+    }
+    else {
+        return "In huidige versie kan docent maar 1 werkgever hebben.";
+    }
+}
+else {
+    if (docent === undefined || docent.werkgever !== from) {
+        return "Docent is niet in dienst bij gebruiker.";
+    }
+    else {
+        if (docent.eigenschappen.verledenDienstverbanden === undefined) {
+            docent.eigenschappen.verledenDienstverbanden = [];
+        }
+        docent.eigenschappen.verledenDienstverbanden.push({ eindDatum: previousBlockTimestamp, werkgever: docent.werkgever });
+        docent.werkgever = null;
+        await query("UPDATE", "docenten", "SET eigenschappen = $2, werkgever = $3 WHERE id = $1;", [payload.docent, JSON.stringify(docent.eigenschappen), docent.werkgever]);
+    }
+}
+return "OK";

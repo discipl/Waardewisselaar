@@ -1,0 +1,62 @@
+Type: DocentAanpassen
+Version: 1.0
+Description: School/Duo past de eigenschappen van een docent aan.
+Template: {"docent":{"type":"addr","desc":"De docent om aan te passen.","name":"Docent"},"eigenschappen":{"type":"json","desc":"Aanpassingen.","name":"Aanpassingen"}}
+Init: 
+Code: Ly9IdWlkaWdlIGVpZ2Vuc2NoYXBwZW4KY29uc3QgZG9jZW50ID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAiZG9jZW50ZW4iLCAiV0hFUkUgaWQgPSAkMTsiLCBbcGF5bG9hZC5kb2NlbnRdKSkucm93c1swXTsKaWYgKGRvY2VudCA9PT0gdW5kZWZpbmVkKSB7CiAgICByZXR1cm4gIkRvY2VudCBiZXN0YWF0IG5pZXQuIjsKfQovL0FsbGVlbiB3ZXJrZ2V2ZXIgbWFnIGRvY2VudGVuIGFhbnBhc3NlbiBvcCBzb21taWdlIHZlbGRlbgpjb25zdCB3ZXJrZ2V2ZXJDaGVjayA9ICgpID0+IHsKICAgIHJldHVybiBkb2NlbnQud2Vya2dldmVyID09PSBmcm9tOwp9OwovL0FsbGVlbiBkdW8gbWFnIGRvY2VudGVuIGFhbnBhc3NlbiBvcCBzb21taWdlIHZlbGRlbgpsZXQgaXNEdW87CmNvbnN0IGR1b0NoZWNrID0gYXN5bmMgKCkgPT4gewogICAgaWYgKGlzRHVvID09PSB1bmRlZmluZWQpIHsKICAgICAgICBjb25zdCBkdW8gPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJlbnRpdGVpdGVuIiwgIldIRVJFIGlkID0gJ0RVTyc7IiwgW10pKS5yb3dzWzBdOwogICAgICAgIGlzRHVvID0gZHVvICE9PSB1bmRlZmluZWQgJiYgZHVvLmFkZHJlc3MgPT09IGZyb207CiAgICB9CiAgICByZXR1cm4gaXNEdW87Cn07Ci8vTmlldXdlIGVpZ2Vuc2NoYXBwZW4KY29uc3QgbmV3U2V0dGluZ3MgPSBKU09OLnBhcnNlKHBheWxvYWQuZWlnZW5zY2hhcHBlbik7CmlmICh0eXBlb2YgbmV3U2V0dGluZ3MgIT09ICJvYmplY3QiIHx8IG5ld1NldHRpbmdzID09PSBudWxsKSB7CiAgICByZXR1cm4gIk9uZ2VsZGlnZSBlaWdlbnNjaGFwcGVuIjsKfQovL0tpamsgb2YgYWFuZ2VwYXN0ZSBlaWdlbnNjaGFwcGVuIGRvb3IgZGUganVpc3RlIGdlYnJ1aWtlciB3b3JkZW4gYWFuZ2VwYXN0IGVuIGdlbGRpZyB6aWpuCmZvciAoY29uc3Qga2V5IG9mIE9iamVjdC5rZXlzKG5ld1NldHRpbmdzKSkgewogICAgc3dpdGNoIChrZXkpIHsKICAgICAgICAvL1VDMS5SMgogICAgICAgIGNhc2UgInZvbGRvZXRBYW5CZXZvZWdkaGVpZHNlaXNlbiI6IC8vQjAwMi5CUjAxLjEKICAgICAgICBjYXNlICJ0d2ludGlnUHJvY2VudExlc2dlYm9uZGVuVGFrZW4iOiAvL0IwMDIuQlIwNi4xCiAgICAgICAgY2FzZSAicGVkYWdvZ2lzY2hEaWRhY3Rpc2NoVmVyYW50d29vcmRlbGlqayI6IC8vQjAwMi5CUjA2LjIKICAgICAgICBjYXNlICJhbWJ1bGFudEJlZ2VsZWlkZXIiOiAvL0IwMDIuQlIwNy4xCiAgICAgICAgY2FzZSAiem9yZ2Nvw7ZyZGluYXRvciI6IC8vQjAwMi5CUjA3LjIKICAgICAgICBjYXNlICJpbnRlcm5lQmVnZWxlaWRlciI6IC8vQjAwMi5CUjA3LjMKICAgICAgICBjYXNlICJyZW1lZGlhbFRlYWNoZXIiOiAvL0IwMDIuQlIwNy40CiAgICAgICAgICAgIGlmICh0eXBlb2YgbmV3U2V0dGluZ3Nba2V5XSAhPT0gImJvb2xlYW4iIHx8ICF3ZXJrZ2V2ZXJDaGVjaygpKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gIk9uZ2VsZGlnZSBlaWdlbnNjaGFwcGVuIG9mIGdlYnJ1aWtlciI7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgLy9VQzEuUjMKICAgICAgICBjYXNlICJncmFhZEJhY2hhbG9yVm9lcmVuIjogLy9CMDAyLkJSMDguMgogICAgICAgICAgICBpZiAodHlwZW9mIG5ld1NldHRpbmdzLmdyYWFkQmFjaGFsb3JWb2VyZW4gIT09ICJib29sZWFuIiB8fCAhYXdhaXQgZHVvQ2hlY2soKSkgewogICAgICAgICAgICAgICAgcmV0dXJuICJPbmdlbGRpZ2UgZWlnZW5zY2hhcHBlbiI7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgZGVmYXVsdDoKICAgICAgICAgICAgcmV0dXJuICJPbmdlbGRpZ2UgZWlnZW5zY2hhcHBlbiI7CiAgICB9Cn0KLy9FaWdlbnNjaGFwcGVuIHVwZGF0ZW4KT2JqZWN0LmFzc2lnbihkb2NlbnQuZWlnZW5zY2hhcHBlbiwgbmV3U2V0dGluZ3MpOwphd2FpdCBxdWVyeSgiVVBEQVRFIiwgImRvY2VudGVuIiwgIlNFVCBlaWdlbnNjaGFwcGVuID0gJDIgV0hFUkUgaWQgPSAkMTsiLCBbcGF5bG9hZC5kb2NlbnQsIEpTT04uc3RyaW5naWZ5KGRvY2VudC5laWdlbnNjaGFwcGVuKV0pOwpyZXR1cm4gIk9LIjs=
+
+Init as text:
+
+Code as text:
+//Huidige eigenschappen
+const docent = (await query("SELECT", "docenten", "WHERE id = $1;", [payload.docent])).rows[0];
+if (docent === undefined) {
+    return "Docent bestaat niet.";
+}
+//Alleen werkgever mag docenten aanpassen op sommige velden
+const werkgeverCheck = () => {
+    return docent.werkgever === from;
+};
+//Alleen duo mag docenten aanpassen op sommige velden
+let isDuo;
+const duoCheck = async () => {
+    if (isDuo === undefined) {
+        const duo = (await query("SELECT", "entiteiten", "WHERE id = 'DUO';", [])).rows[0];
+        isDuo = duo !== undefined && duo.address === from;
+    }
+    return isDuo;
+};
+//Nieuwe eigenschappen
+const newSettings = JSON.parse(payload.eigenschappen);
+if (typeof newSettings !== "object" || newSettings === null) {
+    return "Ongeldige eigenschappen";
+}
+//Kijk of aangepaste eigenschappen door de juiste gebruiker worden aangepast en geldig zijn
+for (const key of Object.keys(newSettings)) {
+    switch (key) {
+        //UC1.R2
+        case "voldoetAanBevoegdheidseisen": //B002.BR01.1
+        case "twintigProcentLesgebondenTaken": //B002.BR06.1
+        case "pedagogischDidactischVerantwoordelijk": //B002.BR06.2
+        case "ambulantBegeleider": //B002.BR07.1
+        case "zorgcoördinator": //B002.BR07.2
+        case "interneBegeleider": //B002.BR07.3
+        case "remedialTeacher": //B002.BR07.4
+            if (typeof newSettings[key] !== "boolean" || !werkgeverCheck()) {
+                return "Ongeldige eigenschappen of gebruiker";
+            }
+            break;
+        //UC1.R3
+        case "graadBachalorVoeren": //B002.BR08.2
+            if (typeof newSettings.graadBachalorVoeren !== "boolean" || !await duoCheck()) {
+                return "Ongeldige eigenschappen";
+            }
+            break;
+        default:
+            return "Ongeldige eigenschappen";
+    }
+}
+//Eigenschappen updaten
+Object.assign(docent.eigenschappen, newSettings);
+await query("UPDATE", "docenten", "SET eigenschappen = $2 WHERE id = $1;", [payload.docent, JSON.stringify(docent.eigenschappen)]);
+return "OK";

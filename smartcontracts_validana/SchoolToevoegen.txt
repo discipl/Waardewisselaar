@@ -1,0 +1,26 @@
+Type: SchoolToevoegen
+Version: 1.0
+Description: Duo voegt een nieuwe school toe of verwijderd een school.
+Template: {"school":{"type":"addr","desc":"De school om toe te voegen of te verwijderen.","name":"School"},"toevoegen":{"type":"bool","desc":"Toevoegen of verwijderen.","name":"Toevoegen"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJzY2hvbGVuIiwgIihpZCBWQVJDSEFSKDM1KSBQUklNQVJZIEtFWSwgZWlnZW5zY2hhcHBlbiBKU09OQiBOT1QgTlVMTCBERUZBVUxUICd7fScsICIgKwogICAgImxhYXRzdF92b2xkZWVkIEJJR0lOVCwgbGFhdHN0X25pZXRfdm9sZGVlZCBCSUdJTlQgTk9UIE5VTEwpOyIsIFtdKTs=
+Code: Ly9BbGxlZW4gZHVvIG1hZyBlZW4gc2Nob29sIHRvZXZvZWdlbgpjb25zdCBkdW8gPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJlbnRpdGVpdGVuIiwgIldIRVJFIGlkID0gJ0RVTyc7IiwgW10pKS5yb3dzWzBdOwppZiAoZHVvID09PSB1bmRlZmluZWQgfHwgZnJvbSAhPT0gZHVvLmFkZHJlc3MpIHsKICAgIHJldHVybiAiT25nZWxkaWdlIGdlYnJ1aWtlciI7Cn0KaWYgKHBheWxvYWQudG9ldm9lZ2VuKSB7CiAgICBhd2FpdCBxdWVyeSgiSU5TRVJUIiwgInNjaG9sZW4iLCAiKGlkLCBsYWF0c3RfbmlldF92b2xkZWVkKSBWQUxVRVMgKCQxLCAkMikgT04gQ09ORkxJQ1QgT04gQ09OU1RSQUlOVCBzY2hvbGVuX3BrZXkgRE8gTk9USElORzsiLCBbcGF5bG9hZC5zY2hvb2wsIHByZXZpb3VzQmxvY2tUaW1lc3RhbXBdKTsKfQplbHNlIHsKICAgIC8vVE9ETyBPbnRzbGEgYWxsZSB3ZXJrbmVtZXJzCiAgICAvL1RPRE8gVmVyd2lqZGVyIGFsbGUgb3BsZWlkaW5nZW4KICAgIC8vVE9ETyBWZXJ3aWpkZXIgc2Nob29sCiAgICByZXR1cm4gIkluIGh1aWRpZ2UgdmVyc2llIGthbiBzY2hvb2wgbmlldCB2ZXJ3aWpkZXJkIHdvcmRlbi4iOwp9CnJldHVybiAiT0siOw==
+
+Init as text:
+await query("CREATE", "scholen", "(id VARCHAR(35) PRIMARY KEY, eigenschappen JSONB NOT NULL DEFAULT '{}', " +
+    "laatst_voldeed BIGINT, laatst_niet_voldeed BIGINT NOT NULL);", []);
+Code as text:
+//Alleen duo mag een school toevoegen
+const duo = (await query("SELECT", "entiteiten", "WHERE id = 'DUO';", [])).rows[0];
+if (duo === undefined || from !== duo.address) {
+    return "Ongeldige gebruiker";
+}
+if (payload.toevoegen) {
+    await query("INSERT", "scholen", "(id, laatst_niet_voldeed) VALUES ($1, $2) ON CONFLICT ON CONSTRAINT scholen_pkey DO NOTHING;", [payload.school, previousBlockTimestamp]);
+}
+else {
+    //TODO Ontsla alle werknemers
+    //TODO Verwijder alle opleidingen
+    //TODO Verwijder school
+    return "In huidige versie kan school niet verwijderd worden.";
+}
+return "OK";

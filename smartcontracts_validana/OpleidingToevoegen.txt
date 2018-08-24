@@ -1,0 +1,36 @@
+Type: OpleidingToevoegen
+Version: 1.0
+Description: Opleider geef aan dat een opleiding (niet meer) bij hun gevolgt kan worden.
+Template: {"opleiding":{"type":"hash","desc":"De opleiding om toe te voegen of te verwijderen.","name":"Opleiding"},"toevoegen":{"type":"bool","desc":"Toevoegen of verwijderen.","name":"Toevoegen"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJvcGxlaWRpbmdlbiIsICIoaWQgQllURUEgUFJJTUFSWSBLRVkgQ0hFQ0sgKG9jdGV0X2xlbmd0aChpZCkgPSAzMiksICIgKwogICAgImVpZ2Vuc2NoYXBwZW4gSlNPTkIgTk9UIE5VTEwgREVGQVVMVCAne30nLCBvcGxlaWRlciBWQVJDSEFSKDM1KSBSRUZFUkVOQ0VTIG9wbGVpZGVycyhpZCkgTk9UIE5VTEwpOyIsIFtdKTs=
+Code: Ly9BbGxlZW4gZWVuIG9wbGVpZGVyIG1hZyBlZW4gb3BsZWlkaW5nIHRvZXZvZWdlbgpjb25zdCBvcGxlaWRlciA9IChhd2FpdCBxdWVyeSgiU0VMRUNUIiwgIm9wbGVpZGVycyIsICJXSEVSRSBpZCA9ICQxOyIsIFtmcm9tXSkpLnJvd3NbMF07CmlmIChvcGxlaWRlciA9PT0gdW5kZWZpbmVkKSB7CiAgICByZXR1cm4gIk9uZ2VsZGlnZSBnZWJydWlrZXIiOwp9CmNvbnN0IGJpbmFyeU9wbGVpZGluZyA9IEJ1ZmZlci5mcm9tKHBheWxvYWQub3BsZWlkaW5nLCAiaGV4Iik7CmNvbnN0IG9wbGVpZGluZyA9IChhd2FpdCBxdWVyeSgiU0VMRUNUIiwgIm9wbGVpZGluZ2VuIiwgIldIRVJFIGlkID0gJDE7IiwgW2JpbmFyeU9wbGVpZGluZ10pKS5yb3dzWzBdOwppZiAocGF5bG9hZC50b2V2b2VnZW4pIHsKICAgIGlmIChvcGxlaWRpbmcgPT09IHVuZGVmaW5lZCkgewogICAgICAgIGF3YWl0IHF1ZXJ5KCJJTlNFUlQiLCAib3BsZWlkaW5nZW4iLCAiKGlkLCBvcGxlaWRlcikgVkFMVUVTICgkMSwgJDIpOyIsIFtiaW5hcnlPcGxlaWRpbmcsIGZyb21dKTsKICAgIH0KICAgIGVsc2UgewogICAgICAgIHJldHVybiAiT3BsZWlkaW5nIGJlc3RhYXQgYWwuIjsKICAgIH0KfQplbHNlIHsKICAgIGlmIChvcGxlaWRpbmcgPT09IHVuZGVmaW5lZCkgewogICAgICAgIHJldHVybiAiT3BsZWlkaW5nIGJlc3RhYXQgbmlldC4iOwogICAgfQogICAgZWxzZSB7CiAgICAgICAgLy9UT0RPIFZlcndpamRlciBvcGxlaWRpbmdlbgogICAgICAgIHJldHVybiAiSW4gaHVpZGlnZSB2ZXJzaWUga2FuIG9wbGVpZGluZyBuaWV0IHZlcndpamRlcmQgd29yZGVuLiI7CiAgICB9Cn0KcmV0dXJuICJPSyI7
+
+Init as text:
+await query("CREATE", "opleidingen", "(id BYTEA PRIMARY KEY CHECK (octet_length(id) = 32), " +
+    "eigenschappen JSONB NOT NULL DEFAULT '{}', opleider VARCHAR(35) REFERENCES opleiders(id) NOT NULL);", []);
+Code as text:
+//Alleen een opleider mag een opleiding toevoegen
+const opleider = (await query("SELECT", "opleiders", "WHERE id = $1;", [from])).rows[0];
+if (opleider === undefined) {
+    return "Ongeldige gebruiker";
+}
+const binaryOpleiding = Buffer.from(payload.opleiding, "hex");
+const opleiding = (await query("SELECT", "opleidingen", "WHERE id = $1;", [binaryOpleiding])).rows[0];
+if (payload.toevoegen) {
+    if (opleiding === undefined) {
+        await query("INSERT", "opleidingen", "(id, opleider) VALUES ($1, $2);", [binaryOpleiding, from]);
+    }
+    else {
+        return "Opleiding bestaat al.";
+    }
+}
+else {
+    if (opleiding === undefined) {
+        return "Opleiding bestaat niet.";
+    }
+    else {
+        //TODO Verwijder opleidingen
+        return "In huidige versie kan opleiding niet verwijderd worden.";
+    }
+}
+return "OK";

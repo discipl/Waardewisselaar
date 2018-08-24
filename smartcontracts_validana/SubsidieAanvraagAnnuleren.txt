@@ -1,0 +1,22 @@
+Type: SubsidieAanvraagAnnuleren
+Version: 1.0
+Description: Leraar annuleert subsidie aanvraag.
+Template: {"opleiding":{"type":"hash","desc":"De opleiding van de subsidieaanvraag die wordt geannuleerd.","name":"Opleiding"},"jaar":{"type":"uint","desc":"Het jaar van de subsidieaanvraag die wordt geannuleerd.","name":"Jaar"}}
+Init: 
+Code: aWYgKHBheWxvYWQuamFhciA+IDIxNDc0ODM2NDcpIHsKICAgIHJldHVybiAiT25nZWxkaWcgamFhci4iOwp9CmNvbnN0IGthbk5vZ0FubnVsZXJlblRpamQgPSBuZXcgRGF0ZShwcmV2aW91c0Jsb2NrVGltZXN0YW1wKTsKLy9CMDAzLkJSMDUuMjogS2FuIHRvdCAyIG1hYW5kZW4gbmEgYWFudnJhYWcgYW5udWxlcmVuCmthbk5vZ0FubnVsZXJlblRpamQuc2V0VVRDTW9udGgoa2FuTm9nQW5udWxlcmVuVGlqZC5nZXRVVENNb250aCgpIC0gMik7CmNvbnN0IGdlYW5udWxlZXJkID0gYXdhaXQgcXVlcnkoIlVQREFURSIsICJzdWJzaWRpZXMiLCAiU0VUIGdlYW5udWxlZXJkID0gdHJ1ZSBXSEVSRSBkb2NlbnQgPSAkMSBBTkQgIiArCiAgICAib3BsZWlkaW5nID0gJDIgQU5EIGphYXIgPSAkMyBBTkQgYWFudnJhYWdfdGlqZCA+PSAkNCBBTkQgZ2Vhbm51bGVlcmQgPSBmYWxzZTsiLCBbZnJvbSwgQnVmZmVyLmZyb20ocGF5bG9hZC5vcGxlaWRpbmcsICJoZXgiKSwgcGF5bG9hZC5qYWFyLCBrYW5Ob2dBbm51bGVyZW5UaWpkLmdldFRpbWUoKV0pOwppZiAoZ2Vhbm51bGVlcmQucm93Q291bnQgPT09IDApIHsKICAgIHJldHVybiAiQWFudnJhYWcgYmVzdGFhdCBuaWV0IG9mIGthbiBuaWV0IG1lZXIgd29yZGVuIGdlYW5udWxlZXJkLiI7Cn0KcmV0dXJuICJPSyI7
+
+Init as text:
+
+Code as text:
+if (payload.jaar > 2147483647) {
+    return "Ongeldig jaar.";
+}
+const kanNogAnnulerenTijd = new Date(previousBlockTimestamp);
+//B003.BR05.2: Kan tot 2 maanden na aanvraag annuleren
+kanNogAnnulerenTijd.setUTCMonth(kanNogAnnulerenTijd.getUTCMonth() - 2);
+const geannuleerd = await query("UPDATE", "subsidies", "SET geannuleerd = true WHERE docent = $1 AND " +
+    "opleiding = $2 AND jaar = $3 AND aanvraag_tijd >= $4 AND geannuleerd = false;", [from, Buffer.from(payload.opleiding, "hex"), payload.jaar, kanNogAnnulerenTijd.getTime()]);
+if (geannuleerd.rowCount === 0) {
+    return "Aanvraag bestaat niet of kan niet meer worden geannuleerd.";
+}
+return "OK";

@@ -1,0 +1,53 @@
+Type: SchoolAanpassen
+Version: 1.0
+Description: Duo past de eigenschappen van een school aan.
+Template: {"school":{"type":"addr","desc":"De school om aan te passen.","name":"School"},"eigenschappen":{"type":"json","desc":"Aanpassingen.","name":"Aanpassingen"}}
+Init: 
+Code: Ly9BbGxlZW4gZHVvIG1hZyBlZW4gc2Nob29sIGFhbnBhc3Nlbgpjb25zdCBkdW8gPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJlbnRpdGVpdGVuIiwgIldIRVJFIGlkID0gJ0RVTyc7IiwgW10pKS5yb3dzWzBdOwppZiAoZHVvID09PSB1bmRlZmluZWQgfHwgZnJvbSAhPT0gZHVvLmFkZHJlc3MpIHsKICAgIHJldHVybiAiT25nZWxkaWdlIGdlYnJ1aWtlciI7Cn0KLy9IdWlkaWdlIGVpZ2Vuc2NoYXBwZW4KY29uc3Qgc2Nob29sID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAic2Nob2xlbiIsICJXSEVSRSBpZCA9ICQxOyIsIFtwYXlsb2FkLnNjaG9vbF0pKS5yb3dzWzBdOwppZiAoc2Nob29sID09PSB1bmRlZmluZWQpIHsKICAgIHJldHVybiAiU2Nob29sIGJlc3RhYXQgbmlldC4iOwp9Ci8vTmlldXdlIGVpZ2Vuc2NoYXBwZW4KY29uc3QgbmV3U2V0dGluZ3MgPSBKU09OLnBhcnNlKHBheWxvYWQuZWlnZW5zY2hhcHBlbik7CmlmICh0eXBlb2YgbmV3U2V0dGluZ3MgIT09ICJvYmplY3QiIHx8IG5ld1NldHRpbmdzID09PSBudWxsKSB7CiAgICByZXR1cm4gIk9uZ2VsZGlnZSBlaWdlbnNjaGFwcGVuIjsKfQovL0tpamsgb2YgYWFuZ2VwYXN0ZSBlaWdlbnNjaGFwcGVuIGdlbGRpZyB6aWpuCmZvciAoY29uc3Qga2V5IG9mIE9iamVjdC5rZXlzKG5ld1NldHRpbmdzKSkgewogICAgc3dpdGNoIChrZXkpIHsKICAgICAgICAvL1VDMS5SMQogICAgICAgIGNhc2UgImJla29zdGlnZGVPbmRlcndpanNpbnN0ZWxsaW5nIjogLy9CMDAyLkJSMDguMQogICAgICAgIGNhc2UgIm9ydGhvcGVkYWdvZ2lzY2hEaWRhY3Rpc2NoZUNlbnRydW0iOiAvL0IwMDIuQlIwOC4yCiAgICAgICAgICAgIGlmICh0eXBlb2YgbmV3U2V0dGluZ3Nba2V5XSAhPT0gImJvb2xlYW4iKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gIk9uZ2VsZGlnZSBlaWdlbnNjaGFwcGVuIjsKICAgICAgICAgICAgfQogICAgICAgICAgICBicmVhazsKICAgICAgICBkZWZhdWx0OgogICAgICAgICAgICByZXR1cm4gIk9uZ2VsZGlnZSBlaWdlbnNjaGFwcGVuIjsKICAgIH0KfQovL0VpZ2Vuc2NoYXBwZW4gdXBkYXRlbgpPYmplY3QuYXNzaWduKHNjaG9vbC5laWdlbnNjaGFwcGVuLCBuZXdTZXR0aW5ncyk7Ci8vS2lqayBvZiBkaWUgbnUgKG5pZXQpIHZvbGRvZWQKbGV0IGxhYXRzdFZvbGRlZWQgPSBzY2hvb2wubGFhdHN0X3ZvbGRlZWQ7CmxldCBsYWF0c3ROaWV0Vm9sZGVlZCA9IHNjaG9vbC5sYWF0c3RfbmlldF92b2xkZWVkOwppZiAoc2Nob29sLmVpZ2Vuc2NoYXBwZW4uYmVrb3N0aWdkZU9uZGVyd2lqc2luc3RlbGxpbmcgPT09IHRydWUgfHwgLy9CMDAyLkJSMDguMQogICAgc2Nob29sLmVpZ2Vuc2NoYXBwZW4ub3J0aG9wZWRhZ29naXNjaERpZGFjdGlzY2hlQ2VudHJ1bSA9PT0gdHJ1ZSkgeyAvL0IwMDIuQlIwOC4yCiAgICBsYWF0c3RWb2xkZWVkID0gcHJldmlvdXNCbG9ja1RpbWVzdGFtcDsgLy9Wb2xkb2V0IG51LCBkdXMgbGFhdHN0IHZvbGRlZWQgdXBkYXRlbgp9CmVsc2UgewogICAgbGFhdHN0TmlldFZvbGRlZWQgPSBwcmV2aW91c0Jsb2NrVGltZXN0YW1wOyAvL1ZvbGRvZXQgbnUgbmlldCwgZHVzIGxhYXRzdCBuaWV0IHZvbGRlZWQgdXBkYXRlbgp9CmF3YWl0IHF1ZXJ5KCJVUERBVEUiLCAic2Nob2xlbiIsICJTRVQgZWlnZW5zY2hhcHBlbiA9ICQyLCBsYWF0c3Rfdm9sZGVlZCA9ICQzLCBsYWF0c3RfbmlldF92b2xkZWVkID0gJDQgV0hFUkUgaWQgPSAkMTsiLCBbcGF5bG9hZC5zY2hvb2wsIEpTT04uc3RyaW5naWZ5KHNjaG9vbC5laWdlbnNjaGFwcGVuKSwgbGFhdHN0Vm9sZGVlZCwgbGFhdHN0TmlldFZvbGRlZWRdKTsKcmV0dXJuICJPSyI7
+
+Init as text:
+
+Code as text:
+//Alleen duo mag een school aanpassen
+const duo = (await query("SELECT", "entiteiten", "WHERE id = 'DUO';", [])).rows[0];
+if (duo === undefined || from !== duo.address) {
+    return "Ongeldige gebruiker";
+}
+//Huidige eigenschappen
+const school = (await query("SELECT", "scholen", "WHERE id = $1;", [payload.school])).rows[0];
+if (school === undefined) {
+    return "School bestaat niet.";
+}
+//Nieuwe eigenschappen
+const newSettings = JSON.parse(payload.eigenschappen);
+if (typeof newSettings !== "object" || newSettings === null) {
+    return "Ongeldige eigenschappen";
+}
+//Kijk of aangepaste eigenschappen geldig zijn
+for (const key of Object.keys(newSettings)) {
+    switch (key) {
+        //UC1.R1
+        case "bekostigdeOnderwijsinstelling": //B002.BR08.1
+        case "orthopedagogischDidactischeCentrum": //B002.BR08.2
+            if (typeof newSettings[key] !== "boolean") {
+                return "Ongeldige eigenschappen";
+            }
+            break;
+        default:
+            return "Ongeldige eigenschappen";
+    }
+}
+//Eigenschappen updaten
+Object.assign(school.eigenschappen, newSettings);
+//Kijk of die nu (niet) voldoed
+let laatstVoldeed = school.laatst_voldeed;
+let laatstNietVoldeed = school.laatst_niet_voldeed;
+if (school.eigenschappen.bekostigdeOnderwijsinstelling === true || //B002.BR08.1
+    school.eigenschappen.orthopedagogischDidactischeCentrum === true) { //B002.BR08.2
+    laatstVoldeed = previousBlockTimestamp; //Voldoet nu, dus laatst voldeed updaten
+}
+else {
+    laatstNietVoldeed = previousBlockTimestamp; //Voldoet nu niet, dus laatst niet voldeed updaten
+}
+await query("UPDATE", "scholen", "SET eigenschappen = $2, laatst_voldeed = $3, laatst_niet_voldeed = $4 WHERE id = $1;", [payload.school, JSON.stringify(school.eigenschappen), laatstVoldeed, laatstNietVoldeed]);
+return "OK";
