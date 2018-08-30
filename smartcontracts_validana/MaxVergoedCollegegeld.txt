@@ -1,0 +1,20 @@
+Type: MaxVergoedCollegegeld
+Version: 1.0
+Description: Duo past maximum te vergoeden collegegeld aan.
+Template: {"jaar":{"type":"uint","desc":"Het jaar waarvoor dit maximum bedrag geldt.","name":"Jaar"},"bedrag":{"type":"float","desc":"Het bedrag.","name":"Bedrag"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJtYXhfdmVyZ29lZF9jb2xsZWdlZ2VsZCIsICIoamFhciBJTlQgUFJJTUFSWSBLRVksIGJlZHJhZ19jZW50ZW4gSU5UIE5PVCBOVUxMKTsiLCBbXSk7
+Code: aWYgKHBheWxvYWQuamFhciA+IDIxNDc0ODM2NDcpIHsKICAgIHJldHVybiAiT25nZWxkaWcgamFhci4iOwp9CmlmIChwYXlsb2FkLmJlZHJhZyA8IDAgfHwgcGF5bG9hZC5iZWRyYWcgPiAyMTQ3NDgzNjQ3KSB7CiAgICByZXR1cm4gIk9uZ2VsZGlnZSBiZWRyYWciOwp9CmNvbnN0IGJlZHJhZ0NlbnRlbiA9IE1hdGgucm91bmQocGF5bG9hZC5iZWRyYWcgKiAxMDApOwphd2FpdCBxdWVyeSgiSU5TRVJUIiwgIm1heF92ZXJnb2VkX2NvbGxlZ2VnZWxkIiwgIihqYWFyLCBiZWRyYWdfY2VudGVuKSBWQUxVRVMgKCQxLCAkMikgT04gQ09ORkxJQ1QgT04gQ09OU1RSQUlOVCAiICsKICAgICJtYXhfdmVyZ29lZF9jb2xsZWdlZ2VsZF9wa2V5IERPIFVQREFURSBTRVQgYmVkcmFnX2NlbnRlbiA9ICQyOyIsIFtwYXlsb2FkLmphYXIsIGJlZHJhZ0NlbnRlbl0pOwpyZXR1cm4gIk9LIjs=
+
+Init as text:
+await query("CREATE", "max_vergoed_collegegeld", "(jaar INT PRIMARY KEY, bedrag_centen INT NOT NULL);", []);
+Code as text:
+if (payload.jaar > 2147483647) {
+    return "Ongeldig jaar.";
+}
+if (payload.bedrag < 0 || payload.bedrag > 2147483647) {
+    return "Ongeldige bedrag";
+}
+const bedragCenten = Math.round(payload.bedrag * 100);
+await query("INSERT", "max_vergoed_collegegeld", "(jaar, bedrag_centen) VALUES ($1, $2) ON CONFLICT ON CONSTRAINT " +
+    "max_vergoed_collegegeld_pkey DO UPDATE SET bedrag_centen = $2;", [payload.jaar, bedragCenten]);
+return "OK";

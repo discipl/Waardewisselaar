@@ -1,0 +1,37 @@
+Type: aanvraagAnnuleren
+Version: 1.0
+Description: Leraar annuleert subsidie aanvraag.
+Template: {"opleiding":{"type":"hash","desc":"De opleiding van de aanvraag die wordt geannuleerd.","name":"Opleiding"},"jaar":{"type":"uint","desc":"Het jaar van de aanvraag die wordt geannuleerd.","name":"Jaar"}}
+Init: 
+Code: aWYgKHBheWxvYWQuamFhciA+IDIxNDc0ODM2NDcpIHsKICAgIHJldHVybiAiT25nZWxkaWcgamFhci4iOwp9Ci8vQWxsZSBzdWJzaWRpZWFhbnZyYWdlbiBnZXNvcnRlZXJkIG9wIGphYXIKY29uc3Qgc3Vic2lkaWVBYW52cmFnZW4gPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJzdWJzaWRpZXMiLCAiV0hFUkUgZG9jZW50ID0gJDEgQU5EIG9wbGVpZGluZyA9ICQyIEFORCBnZWFubnVsZWVyZCA9IGZhbHNlOyIsIFtmcm9tLCBCdWZmZXIuZnJvbShwYXlsb2FkLm9wbGVpZGluZywgImhleCIpXSkpLnJvd3M7CnN1YnNpZGllQWFudnJhZ2VuLnNvcnQoKGFhbnZyYWFnQSwgYWFudnJhYWdCKSA9PiBhYW52cmFhZ0EuamFhciAtIGFhbnZyYWFnQi5qYWFyKTsKY29uc3QgYWFudnJhYWcgPSBzdWJzaWRpZUFhbnZyYWdlbi5maW5kKChlZW5BYW52cmFhZykgPT4gZWVuQWFudnJhYWcuamFhciA9PT0gcGF5bG9hZC5qYWFyKTsKaWYgKGFhbnZyYWFnID09PSB1bmRlZmluZWQpIHsKICAgIHJldHVybiAiU3Vic2lkaWUgYWFudnJhYWcgYmVzdGFhdCBuaWV0LiI7Cn0KY29uc3Qga2FuTm9nQW5udWxlcmVuVGlqZCA9IG5ldyBEYXRlKHByZXZpb3VzQmxvY2tUaW1lc3RhbXApOwovL0IwMDMuQlIwNS4yOiBLYW4gdG90IDIgbWFhbmRlbiBuYSBhYW52cmFhZyBhbm51bGVyZW4Ka2FuTm9nQW5udWxlcmVuVGlqZC5zZXRVVENNb250aChrYW5Ob2dBbm51bGVyZW5UaWpkLmdldFVUQ01vbnRoKCkgKyAyKTsKaWYgKGFhbnZyYWFnLmFhbnZyYWFnX3RpamQgPiBrYW5Ob2dBbm51bGVyZW5UaWpkLmdldFRpbWUoKSkgewogICAgcmV0dXJuICJTdWJzaWRpZSBhYW52cmFhZyBrYW4gbmlldCBtZWVyIHdvcmRlbiBnZWFubnVsZWVyZC4iOwp9CmlmIChzdWJzaWRpZUFhbnZyYWdlbi5zb21lKChlZW5BYW52cmFhZykgPT4gZWVuQWFudnJhYWcuamFhciA+IHBheWxvYWQuamFhcikpIHsKICAgIHJldHVybiAiRXIgemlqbiBhbCB2ZXJ2b2xnIGFhbnZyYWdlbiB2b29yIGRlemUgYWFudnJhYWcsIGFubnVsZWVyIGRlemUgZWVyc3QuIjsKfQovL0FubnVsZWVyIGRlIGFhbnZyYWFnCmF3YWl0IHF1ZXJ5KCJVUERBVEUiLCAic3Vic2lkaWVzIiwgIlNFVCBnZWFubnVsZWVyZCA9IHRydWUgV0hFUkUgZG9jZW50ID0gJDEgQU5EICIgKwogICAgIm9wbGVpZGluZyA9ICQyIEFORCBqYWFyID0gJDM7IiwgW2FhbnZyYWFnLmRvY2VudCwgYWFudnJhYWcub3BsZWlkaW5nLCBhYW52cmFhZy5qYWFyXSk7Ci8vVmVyaG9vZyBiZXNjaGlrYmFyZSBidWRnZXQKY29uc3QgdmVydm9sZ0FhbnZyYWFnID0gc3Vic2lkaWVBYW52cmFnZW4ubGVuZ3RoID4gMTsKYXdhaXQgcXVlcnkoIlVQREFURSIsICJidWRnZXQiLCAiU0VUIHVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbiA9IHVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbiArICQzLCAiICsKICAgICJ1aXRnZWdldmVuX3ZlcnZvbGdfY2VudGVuID0gdWl0Z2VnZXZlbl92ZXJ2b2xnX2NlbnRlbiArICQ0IFdIRVJFIGphYXIgPSAkMSBBTkQgc2VjdG9yID0gJDI7IiwgW2FhbnZyYWFnLmphYXIsIGFhbnZyYWFnLnNlY3RvciwgYWFudnJhYWcuYmVkcmFnX2NlbnRlbiwgdmVydm9sZ0FhbnZyYWFnID8gYWFudnJhYWcuYmVkcmFnX2NlbnRlbiA6IDBdKTsKcmV0dXJuICJPSyI7
+
+Init as text:
+
+Code as text:
+if (payload.jaar > 2147483647) {
+    return "Ongeldig jaar.";
+}
+//Alle subsidieaanvragen gesorteerd op jaar
+const subsidieAanvragen = (await query("SELECT", "subsidies", "WHERE docent = $1 AND opleiding = $2 AND geannuleerd = false;", [from, Buffer.from(payload.opleiding, "hex")])).rows;
+subsidieAanvragen.sort((aanvraagA, aanvraagB) => aanvraagA.jaar - aanvraagB.jaar);
+const aanvraag = subsidieAanvragen.find((eenAanvraag) => eenAanvraag.jaar === payload.jaar);
+if (aanvraag === undefined) {
+    return "Subsidie aanvraag bestaat niet.";
+}
+const kanNogAnnulerenTijd = new Date(previousBlockTimestamp);
+//B003.BR05.2: Kan tot 2 maanden na aanvraag annuleren
+kanNogAnnulerenTijd.setUTCMonth(kanNogAnnulerenTijd.getUTCMonth() + 2);
+if (aanvraag.aanvraag_tijd > kanNogAnnulerenTijd.getTime()) {
+    return "Subsidie aanvraag kan niet meer worden geannuleerd.";
+}
+if (subsidieAanvragen.some((eenAanvraag) => eenAanvraag.jaar > payload.jaar)) {
+    return "Er zijn al vervolg aanvragen voor deze aanvraag, annuleer deze eerst.";
+}
+//Annuleer de aanvraag
+await query("UPDATE", "subsidies", "SET geannuleerd = true WHERE docent = $1 AND " +
+    "opleiding = $2 AND jaar = $3;", [aanvraag.docent, aanvraag.opleiding, aanvraag.jaar]);
+//Verhoog beschikbare budget
+const vervolgAanvraag = subsidieAanvragen.length > 1;
+await query("UPDATE", "budget", "SET uitgegeven_totaal_centen = uitgegeven_totaal_centen + $3, " +
+    "uitgegeven_vervolg_centen = uitgegeven_vervolg_centen + $4 WHERE jaar = $1 AND sector = $2;", [aanvraag.jaar, aanvraag.sector, aanvraag.bedrag_centen, vervolgAanvraag ? aanvraag.bedrag_centen : 0]);
+return "OK";
