@@ -1,0 +1,362 @@
+Type: SubsidieAanvraagBrexit
+Version: 1.0
+Description: Leraar vraagt een subsidie aan.
+Template: {"opleiding":{"type":"hash","desc":"De opleiding waarvoor een subsidie wordt aangevraagt.","name":"Opleiding"},"jaar":{"type":"uint","desc":"Het jaar waarvoor het wordt aangevraagt.","name":"Jaar"}}
+Init: 
+Code: Ly9LaWprIG9mIGlldHMgYWFuIGFsbGUgKHN1Yil2b29yd2FhcmRlbiB2b2xkb2V0LiBabyBuaWV0IGdlZWYgdGVydWcgYWFuIHdlbGtlIChzdWIpdm9vcndhYXJkZW4gbmlldCB3b3JkdCB2b2xkYWFuLgpjb25zdCBhbmQgPSAoYnJvLCAuLi5hcmdzKSA9PiB7CiAgICBsZXQgdW5rbm93biA9IFtdOyAvL0FsbGVzIHdhdCBub2cgb25iZWtlbmQgaXMuCiAgICBsZXQgcHJvYmxlbXMgPSBbXTsgLy9BbGxlcyB3YWFyIG5pZXQgYWFuIHdvcmR0IHZvbGRhYW4uCiAgICBsZXQgcmVzdWx0ID0gdHJ1ZTsKICAgIGxldCBiYWROb25GdW5jdGlvbiA9IGZhbHNlOwogICAgLy9Wb29yIGFsbGUgYXJndW1lbnRlbiBraWprZW4gb2YgaGV0IGVlbiBzdWJmdW5jdGllIGlzIChkaWUgd29yZHQgdWl0Z2V2b2VyZCkgb2Ygb2YgaGV0IHZvbGRvZXQKICAgIGZvciAobGV0IGFyZyBvZiBhcmdzKSB7CiAgICAgICAgaWYgKHR5cGVvZiBhcmcgPT09ICJmdW5jdGlvbiIpIHsKICAgICAgICAgICAgY29uc3QgYXJnUmVzdWx0ID0gYXJnKCk7CiAgICAgICAgICAgIHVua25vd24ucHVzaCguLi5hcmdSZXN1bHQudW5rbm93bik7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goLi4uYXJnUmVzdWx0LnByb2JsZW1zKTsKICAgICAgICAgICAgYXJnID0gYXJnUmVzdWx0LnJlc3VsdDsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoYXJnICE9PSB0cnVlKSB7CiAgICAgICAgICAgIGJhZE5vbkZ1bmN0aW9uID0gdHJ1ZTsKICAgICAgICB9CiAgICAgICAgaWYgKGFyZyA9PT0gdW5kZWZpbmVkICYmIHJlc3VsdCAhPT0gZmFsc2UpIHsgLy9JbmZvcm1hdGllIG9udGJyZWVrdCBub2csIGR1cyBrYW4gbm9nIG5pZXQgZ29lZGtldXJlbgogICAgICAgICAgICByZXN1bHQgPSB1bmRlZmluZWQ7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKGFyZyA9PT0gZmFsc2UpIHsgLy9JbmZvcm1hdGllIGdlZWZ0IGFhbiBkYXQgZXIgbmlldCB3b3JkdCB2b2xkYWFuLCBvbmdlYWNodCBkZSByZXN0CiAgICAgICAgICAgIHJlc3VsdCA9IGZhbHNlOwogICAgICAgICAgICAvL1dlIHdpbGxlbiBpbiBkZSBmb3V0bWVsZGluZyB3ZWwgYWxsZXMgd2F0IGZvdXQgZ2FhdCwgZHVzIGdhIHZlcmRlcgogICAgICAgIH0KICAgIH0KICAgIC8vR2VlZiBkb29yIGFhbiB3ZWxrZSBvbmRlcmRlbGVuIG5pZXQgd29yZHQgdm9sZGFhbgogICAgaWYgKGJhZE5vbkZ1bmN0aW9uKSB7CiAgICAgICAgaWYgKHJlc3VsdCA9PT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgIHVua25vd24ucHVzaChicm8pOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChyZXN1bHQgPT09IGZhbHNlKSB7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goYnJvKTsKICAgICAgICB9CiAgICB9CiAgICBpZiAocmVzdWx0ID09PSB0cnVlKSB7CiAgICAgICAgdW5rbm93biA9IFtdOwogICAgICAgIHByb2JsZW1zID0gW107CiAgICB9CiAgICByZXR1cm4geyByZXN1bHQsIHVua25vd24sIHByb2JsZW1zIH07Cn07Ci8vS2lqayBvZiBpZXRzIGFhbiBlZW4gKHN1Yil2b29yd2FhcmRlbiB2b2xkb2V0LiBabyBuaWV0IGdlZWYgdGVydWcgYWFuIHdlbGtlIChzdWIpdm9vcndhYXJkZW4gbmlldCB3b3JkdCB2b2xkYWFuLgpjb25zdCBvciA9IChicm8sIC4uLmFyZ3MpID0+IHsKICAgIGxldCB1bmtub3duID0gW107IC8vQWxsZXMgd2F0IG5vZyBvbmJla2VuZCBpcy4KICAgIGxldCBwcm9ibGVtcyA9IFtdOyAvL0FsbGVzIHdhYXIgbmlldCBhYW4gd29yZHQgdm9sZGFhbi4KICAgIGxldCByZXN1bHQgPSBmYWxzZTsKICAgIGxldCBiYWROb25GdW5jdGlvbiA9IGZhbHNlOwogICAgLy9Wb29yIGFsbGUgYXJndW1lbnRlbiBraWprZW4gb2YgaGV0IGVlbiBzdWJmdW5jdGllIGlzIChkaWUgd29yZHQgdWl0Z2V2b2VyZCkgb2Ygb2YgaGV0IHZvbGRvZXQKICAgIGZvciAobGV0IGFyZyBvZiBhcmdzKSB7CiAgICAgICAgaWYgKHR5cGVvZiBhcmcgPT09ICJmdW5jdGlvbiIpIHsKICAgICAgICAgICAgY29uc3QgYXJnUmVzdWx0ID0gYXJnKCk7CiAgICAgICAgICAgIGFyZyA9IGFyZ1Jlc3VsdC5yZXN1bHQ7CiAgICAgICAgICAgIHVua25vd24ucHVzaCguLi5hcmdSZXN1bHQudW5rbm93bik7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goLi4uYXJnUmVzdWx0LnByb2JsZW1zKTsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoYXJnICE9PSB0cnVlKSB7CiAgICAgICAgICAgIGJhZE5vbkZ1bmN0aW9uID0gdHJ1ZTsKICAgICAgICB9CiAgICAgICAgaWYgKGFyZyA9PT0gdW5kZWZpbmVkKSB7IC8vSW5mb3JtYXRpZSBvbnRicmVla3Qgbm9nLCBkdXMga2FuIG5vZyBuaWV0IGdvZWRrZXVyZW4KICAgICAgICAgICAgcmVzdWx0ID0gdW5kZWZpbmVkOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChhcmcgPT09IHRydWUpIHsgLy9JbmZvcm1hdGllIGdlZWZ0IGFhbiBkYXQgZXIgYWFuIHdvcmR0IHZvbGRhYW4sIG9uZ2VhY2h0IGRlIHJlc3QKICAgICAgICAgICAgcmVzdWx0ID0gdHJ1ZTsKICAgICAgICAgICAgYnJlYWs7IC8vV2Ugd2V0ZW4gYWwgZGF0IGhldCB0b3RhYWwgZ29lZCBpcywgZHVzIGdhIG5pZXQgdmVyZGVyLgogICAgICAgIH0KICAgIH0KICAgIC8vR2VlZiBkb29yIGFhbiB3ZWxrZSBvbmRlcmRlbGVuIG5pZXQgd29yZHQgdm9sZGFhbgogICAgaWYgKGJhZE5vbkZ1bmN0aW9uKSB7CiAgICAgICAgaWYgKHJlc3VsdCA9PT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgIHVua25vd24ucHVzaChicm8pOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChyZXN1bHQgPT09IGZhbHNlKSB7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goYnJvKTsKICAgICAgICB9CiAgICB9CiAgICBpZiAocmVzdWx0ID09PSB0cnVlKSB7CiAgICAgICAgdW5rbm93biA9IFtdOwogICAgICAgIHByb2JsZW1zID0gW107CiAgICB9CiAgICByZXR1cm4geyByZXN1bHQsIHVua25vd24sIHByb2JsZW1zIH07Cn07Ci8vS2lqayBvZiBpZXRzIGVyZ2VucyBhYW4gdm9sZG9ldC4KY29uc3QgY29tcGFyZSA9IChicm8sIGNvbXAsIGEsIGIpID0+IHsKICAgIGxldCB1bmtub3duID0gW107IC8vQWxsZXMgd2F0IG5vZyBvbmJla2VuZCBpcy4KICAgIGxldCBwcm9ibGVtcyA9IFtdOyAvL0FsbGVzIHdhYXIgbmlldCBhYW4gd29yZHQgdm9sZGFhbi4KICAgIGxldCByZXN1bHQ7CiAgICBpZiAodHlwZW9mIGEgPT09ICJmdW5jdGlvbiIpIHsKICAgICAgICBjb25zdCB0ZW1wYSA9IGEoKTsKICAgICAgICBhID0gdGVtcGEucmVzdWx0OwogICAgICAgIHVua25vd24ucHVzaCguLi50ZW1wYS51bmtub3duKTsKICAgICAgICBwcm9ibGVtcy5wdXNoKC4uLnRlbXBhLnByb2JsZW1zKTsKICAgIH0KICAgIGlmICh0eXBlb2YgYiA9PT0gImZ1bmN0aW9uIikgewogICAgICAgIGNvbnN0IHRlbXBiID0gYigpOwogICAgICAgIGIgPSB0ZW1wYi5yZXN1bHQ7CiAgICAgICAgdW5rbm93bi5wdXNoKC4uLnRlbXBiLnVua25vd24pOwogICAgICAgIHByb2JsZW1zLnB1c2goLi4udGVtcGIucHJvYmxlbXMpOwogICAgfQogICAgaWYgKGEgIT09IHVuZGVmaW5lZCAmJiBiICE9PSB1bmRlZmluZWQpIHsKICAgICAgICByZXN1bHQgPSBjb21wKGEsIGIpOwogICAgfQogICAgaWYgKHJlc3VsdCA9PT0gdHJ1ZSkgewogICAgICAgIHVua25vd24gPSBbXTsKICAgICAgICBwcm9ibGVtcyA9IFtdOwogICAgfQogICAgZWxzZSBpZiAocmVzdWx0ID09PSBmYWxzZSkgewogICAgICAgIHByb2JsZW1zLnB1c2goYnJvKTsKICAgIH0KICAgIGVsc2UgewogICAgICAgIHVua25vd24ucHVzaChicm8pOwogICAgfQogICAgcmV0dXJuIHsgcmVzdWx0LCB1bmtub3duLCBwcm9ibGVtcyB9Owp9OwppZiAocGF5bG9hZC5qYWFyID4gMjE0NzQ4MzY0NykgewogICAgcmV0dXJuICJPbmdlbGRpZyBqYWFyLiI7Cn0KLy9PcGxlaWRpbmcgZGllIHdvcmR0IGFhbmdldnJhYWd0CmNvbnN0IGJpbmFyeU9wbGVpZGluZyA9IEJ1ZmZlci5mcm9tKHBheWxvYWQub3BsZWlkaW5nLCAiaGV4Iik7CmNvbnN0IHN0dWRpZSA9IChhd2FpdCBxdWVyeSgiU0VMRUNUIiwgIm9wbGVpZGluZ2VuIiwgIldIRVJFIGlkID0gJDE7IiwgW2JpbmFyeU9wbGVpZGluZ10pKS5yb3dzWzBdOwppZiAoc3R1ZGllID09PSB1bmRlZmluZWQpIHsKICAgIHJldHVybiAiQWFuZ2V2cmFhZ2RlIG9wbGVpZGluZyBiZXN0YWF0IG5pZXQuIjsKfQovL0RlIGFhbnZyYWdlcgpjb25zdCBhYW52cmFnZXIgPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJkb2NlbnRlbiIsICJXSEVSRSBpZCA9ICQxOyIsIFtmcm9tXSkpLnJvd3NbMF07CmlmIChhYW52cmFnZXIgPT09IHVuZGVmaW5lZCkgewogICAgcmV0dXJuICJWcmFhZyB1dyAoZXgtKXdlcmtnZXZlciBvbSB1IGFscyBsZXJhYXIgdG9lIHRlIHZvZWdlbiBvbSBlZW4gc3Vic2lkaWVhYW52cmFhZyB0ZSBrdW5uZW4gZG9lbi4iOwp9Ci8vQWxsZSBzdWJzaWRpZXMgZGllIGplIGhlYnQgYWFuZ2V2cmFhZ3QgKGV4Y2x1c2llZiBodWlkaWdlIGFhbnZyYWFnIGVuIGdlYW5ubnVsZWVyZGUgYWFudnJhZ2VuKQpjb25zdCBzdWJzaWRpZXMgPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJzdWJzaWRpZXMiLCAiSk9JTiBvcGxlaWRpbmdlbiBPTiAiICsKICAgICJzdWJzaWRpZXMub3BsZWlkaW5nID0gb3BsZWlkaW5nZW4uaWQgV0hFUkUgZG9jZW50ID0gJDEgQU5EIGdlYW5udWxlZXJkID0gZmFsc2U7IiwgW2Zyb21dKSkucm93czsKLy9BbGxlIHN1YnNpZGllcyB2b29yIGRlIGh1aWRpZ2Ugb3BsZWlkaW5nIGdlc29ydGVlcmQgb3AgamFhcgpjb25zdCBodWlkaWdlU3Vic2lkaWVzID0gc3Vic2lkaWVzCiAgICAuZmlsdGVyKChzdWJzaWRpZSkgPT4gc3Vic2lkaWUub3BsZWlkaW5nLmVxdWFscyhiaW5hcnlPcGxlaWRpbmcpKQogICAgLnNvcnQoKHN1YnNpZGllMSwgc3Vic2lkaWUyKSA9PiBzdWJzaWRpZTEuamFhciAtIHN1YnNpZGllMi5qYWFyKTsKY29uc3QgdmVydm9sZ0FhbnZyYWFnID0gaHVpZGlnZVN1YnNpZGllcy5sZW5ndGggIT09IDA7Ci8vQWxsZSBvdWRlIHN1YnNpZGllcyBlbiBvcGxlaWRpbmdlbgpjb25zdCBvdWRlU3Vic2lkaWVzID0gc3Vic2lkaWVzLmZpbHRlcigoc3Vic2lkaWUpID0+ICFzdWJzaWRpZS5vcGxlaWRpbmcuZXF1YWxzKGJpbmFyeU9wbGVpZGluZykpOwpjb25zdCBhYW50YWxPdWRlT3BsZWlkaW5nZW4gPSBuZXcgU2V0KG91ZGVTdWJzaWRpZXMubWFwKChvdWRlU3Vic2lkaWUpID0+IG91ZGVTdWJzaWRpZS5vcGxlaWRpbmcpKS5zaXplOwovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KLy8gQjAwNAovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KY29uc3Qgc3R1ZGllVm9sZG9ldCA9ICgpID0+IGFuZCgiQjAwNC5CUjAxIiwgc3R1ZGllVm9sZG9ldE9wbGVpZGluZ3Nzb29ydCwgLy9CMDA0LkJSMDEuMQpzdHVkaWVKdWlzdGVMYW5kLCAvL0IwMDQuQlIwMS4yCnN0dWRpZUp1aXN0ZVN0YXR1cyAvL0IwMDQuQlIwMS4zCik7CmNvbnN0IHN0dWRpZVZvbGRvZXRPcGxlaWRpbmdzc29vcnQgPSAoKSA9PiBvcigiQjAwNC5CUjAyIiwgc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uYmFjaGVsb3IsIC8vQjAwNC5CUjAyLjEKc3R1ZGllLmVpZ2Vuc2NoYXBwZW4ubWFzdGVyLCAvL0IwMDQuQlIwMi4yCnN0dWRpZS5laWdlbnNjaGFwcGVuLmRlZmljacOrbnRpZW9wbGVpZGluZyAvL0IwMDQuQlIwMi4zCik7CmNvbnN0IHN0dWRpZUp1aXN0ZUxhbmQgPSAoKSA9PiBvcigiQjAwNC5CUjAzIiwgc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uaW5OZWRlcmxhbmQsIC8vQjAwNC5CUjAzLjEKc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uaW5FVSwgLy9CMDA0LkJSMDMuMgpzdHVkaWUuZWlnZW5zY2hhcHBlbi5pbkFydWJhLCAvL0IwMDQuQlIwMy4zCnN0dWRpZS5laWdlbnNjaGFwcGVuLmluU2ludE1hYXJ0ZW4sIC8vQjAwNC5CUjAzLjQKc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uaW5DdXJhw6dhbywgLy9CMDA0LkJSMDMuNQpzdHVkaWUuZWlnZW5zY2hhcHBlbi5pbkVuZ2xhbmQgPT09IHRydWUgJiYgcHJldmlvdXNCbG9ja1RpbWVzdGFtcCA+IERhdGUuVVRDKDIwMTgsIDIsIDI5KSAvL0JyZXhpdCB1cGRhdGUKKTsKY29uc3Qgc3R1ZGllSnVpc3RlU3RhdHVzID0gKCkgPT4gb3IoIkIwMDQuQlIwNCIsIHN0dWRpZS5laWdlbnNjaGFwcGVuLk51ZmZpY0dlbGlqa3dhYXJkaWdWZXJrbGFhcmRlQnVpdGVubGFuZHMsIC8vQjAwNC5CUjA0LjEKc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uTlZPZ2VhY2NyZWRpdGVlcmQgLy9CMDA0LkJSMDQuMgopOwovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KLy8gQjAwMwovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KY29uc3Qgdm9vcndhYXJkZW5BYW50YWxLZWVyU3Vic2lkaWVBYW5nZXZyYWFnZCA9ICgpID0+IHsKICAgIHJldHVybiBhbmQoIkIwMDMuQlIwMSIsICgpID0+IGNvbXBhcmUoIkIwMDMuQlIwMS4xIiwgKGEsIGIpID0+IGEgPiBiLCBtYXhpbWFhbFN1YnNpZWRpZUphcmVuLCBhYW50YWxWZXJzdHJla2VuU3Vic2lkaWVqYXJlbigpKSwgKCkgPT4gY29tcGFyZSgiQjAwMy5CUjAxLjIiLCAoYSwgYikgPT4gYSA8PSBiLCBwYXlsb2FkLmphYXIsIHVpdGVyc3RlU3Vic2lkaWVqYWFyKSwgbWF4aW1hYWxPcGxlaWRpbmdlblN1YnNpZGllLCAvL0IwMDMuQlIwMS4zCiAgICBzdWJzaWRpZXMuZmluZCgoc3Vic2lkaWUpID0+IHN1YnNpZGllLmphYXIgPT09IHBheWxvYWQuamFhcikgPT09IHVuZGVmaW5lZCk7IC8vVG9ldm9lZ2luZzogTWFnIDEgc3Vic2lkaWUgcGVyIGphYXIKfTsKY29uc3QgbWF4aW1hYWxTdWJzaWVkaWVKYXJlbiA9ICgpID0+IHsKICAgIGxldCByZXN1bHQ7CiAgICBpZiAoc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uRUMgIT09IHVuZGVmaW5lZCkgewogICAgICAgIGlmIChzdHVkaWUuZWlnZW5zY2hhcHBlbi5FQyA+PSAzMCAmJiBzdHVkaWUuZWlnZW5zY2hhcHBlbi5FQyA8IDYwKSB7CiAgICAgICAgICAgIHJlc3VsdCA9IDE7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHN0dWRpZS5laWdlbnNjaGFwcGVuLkVDID09PSA2MCkgewogICAgICAgICAgICByZXN1bHQgPSAyOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChzdHVkaWUuZWlnZW5zY2hhcHBlbi5FQyA+IDYwKSB7CiAgICAgICAgICAgIHJlc3VsdCA9IDM7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICByZXN1bHQgPSAwOwogICAgICAgIH0KICAgIH0KICAgIHJldHVybiB7IHJlc3VsdCwgdW5rbm93bjogcmVzdWx0ID09PSB1bmRlZmluZWQgPyBbIkIwMDMuQlIwMiJdIDogW10sIHByb2JsZW1zOiBbXSB9Owp9Owpjb25zdCBhYW50YWxWZXJzdHJla2VuU3Vic2lkaWVqYXJlbiA9ICgpID0+IGh1aWRpZ2VTdWJzaWRpZXMuZmlsdGVyKChzdWJzaWRpZSkgPT4gYW5kKCJCMDAzLkJSMDMiLCAoKSA9PiBzdWJzaWRpZUlzVG9lZ2VrZW50KHN1YnNpZGllKSwgLy9CMDAzLkJSMDMuMQooKSA9PiBzdWJzaWRpZUlzVmVyYnJ1aWt0KHN1YnNpZGllKSAvL0IwMDMuQlIwMy4yCikpLmxlbmd0aDsKY29uc3Qgc3Vic2lkaWVJc1RvZWdla2VudCA9IChzdWJzaWRpZSkgPT4gb3IoIkIwMDMuQlIwNCIsIHN1YnNpZGllICE9PSB1bmRlZmluZWQsIC8vQjAwMy5CUjA0LjEsIHN1YnNpZGllcyB3b3JkZW4gZ2VsaWprIHRvZWdla2VudCBkdXMgYmVraWprIHRvZWdla2VuZGUgc3Vic2lkaWVzCm91ZGVTdWJzaWRpZXMuc29tZSgob3BsZWlkaW5nKSA9PiBvcGxlaWRpbmcuZWlnZW5zY2hhcHBlbi5kZWZpY2nDq250aWVvcGxlaWRpbmcgPT09IHRydWUpIC8vQjAwMy5CUjA0LjIKKTsKY29uc3Qgc3Vic2lkaWVJc1ZlcmJydWlrdCA9IChzdWJzaWRpZSkgPT4gYW5kKCJCMDAzLkJSMDUiLCBzdWJzaWRpZSAhPT0gdW5kZWZpbmVkLCAvL0IwMDMuQlIwNS4xLCBzdWJzaWRpZXMgd29yZGVuIGdlbGlqayB0b2VnZWtlbnQgZHVzIGJla2lqayB0b2VnZWtlbmRlIHN1YnNpZGllcwohc3Vic2lkaWUuZ2Vhbm51bGVlcmQgLy9CMDAzLkJSMDUuMiwgd2Ugc2VsZWN0ZXJlbiBhbCBnZWVuIGdlYW5udWxlZXJkZSBhYW52cmFnZW4gd2FudCAnZGV6ZSBoZWJiZW4gbm9vaXQgcGxhYXRzZ2V2b25kZW4nCik7CmNvbnN0IHVpdGVyc3RlU3Vic2lkaWVqYWFyID0gKCkgPT4gewogICAgY29uc3QgcGVyaW9kZSA9IGJldXJzcGVyaW9kZSgpOwogICAgaWYgKHBlcmlvZGUucmVzdWx0ID09PSB1bmRlZmluZWQpIHsKICAgICAgICByZXR1cm4gcGVyaW9kZTsKICAgIH0KICAgIGVsc2UgewogICAgICAgIGNvbnN0IHJlc3VsdCA9ICh2ZXJ2b2xnQWFudnJhYWcgPyBodWlkaWdlU3Vic2lkaWVzWzBdLmphYXIgOiBwYXlsb2FkLmphYXIpIC8vQjAwMy5CUjA2LjEKICAgICAgICAgICAgKyBwZXJpb2RlLnJlc3VsdDsgLy9CMDAzLkJSMDYuMgogICAgICAgIHJldHVybiB7IHJlc3VsdCwgdW5rbm93bjogW10sIHByb2JsZW1zOiBbXSB9OwogICAgfQp9Owpjb25zdCBiZXVyc3BlcmlvZGUgPSAoKSA9PiB7CiAgICBsZXQgcmVzdWx0OwogICAgaWYgKHN0dWRpZS5laWdlbnNjaGFwcGVuLkVDICE9PSB1bmRlZmluZWQpIHsKICAgICAgICBpZiAoc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uRUMgPj0gMzAgJiYgc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uRUMgPCA2MCkgewogICAgICAgICAgICByZXN1bHQgPSAwOyAvL0hpZXIgaGViIGplIGVlbiBvZmYtYnktb25lIGVycm9yIGFscyBqZSBoZXQgc2NoZW1hIHZvbGd0CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHN0dWRpZS5laWdlbnNjaGFwcGVuLkVDID09PSA2MCkgewogICAgICAgICAgICByZXN1bHQgPSAzOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChzdHVkaWUuZWlnZW5zY2hhcHBlbi5FQyA+IDYwKSB7CiAgICAgICAgICAgIHJlc3VsdCA9IDU7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICByZXN1bHQgPSAwOwogICAgICAgIH0KICAgIH0KICAgIHJldHVybiB7IHJlc3VsdCwgdW5rbm93bjogcmVzdWx0ID09PSB1bmRlZmluZWQgPyBbIkIwMDMuQlIwNyJdIDogW10sIHByb2JsZW1zOiBbXSB9Owp9Owpjb25zdCBtYXhpbWFhbE9wbGVpZGluZ2VuU3Vic2lkaWUgPSAoKSA9PiBvcigiQjAwMy5CUjA4IiwgYWFudGFsT3VkZU9wbGVpZGluZ2VuID09PSAwLCAvL0IwMDMuQlIwOC4xCi8vQWxzIGhldCBhYW50YWwgb3VkZSBvcGxlaWRpbmdlbiAxIGlzIGdhYW4gYWxsZSBvdWRlIHN1YnNpZGllcyBvdmVyIGRlemVsZmRlIG9wbGVpZGluZywgZHVzIHBhayBnZXdvb24gZGUgZWVyc3RlCmFhbnRhbE91ZGVPcGxlaWRpbmdlbiAhPT0gMSA/IGZhbHNlIDogc3R1ZGllLmVpZ2Vuc2NoYXBwZW4ubWFzdGVyID09PSB1bmRlZmluZWQgPyB1bmRlZmluZWQgOgogICAgc3R1ZGllLmVpZ2Vuc2NoYXBwZW4ubWFzdGVyICYmIG91ZGVTdWJzaWRpZXNbMF0uZWlnZW5zY2hhcHBlbi5iYWNoZWxvciwgLy9CMDAzLkJSMDguMgphYW50YWxPdWRlT3BsZWlkaW5nZW4gIT09IDEgPyBmYWxzZSA6IHN0dWRpZS5laWdlbnNjaGFwcGVuLm1hc3RlciA9PT0gdW5kZWZpbmVkID8gdW5kZWZpbmVkIDoKICAgIHN0dWRpZS5laWdlbnNjaGFwcGVuLm1hc3RlciAmJiBvdWRlU3Vic2lkaWVzWzBdLmVpZ2Vuc2NoYXBwZW4uZGVmaWNpw6tudGllb3BsZWlkaW5nLCAvL0IwMDMuQlIwOC4zCmZhbHNlIC8vQjAwMy5CUjA4LjQgd29yZHQgbmlldCBtZWVnZW5vbWVuLCB6aWUgaXNzdWUgIzUwCik7Ci8vQjAwMy5CUjA5ICYgQjAwMy5CUjEwIHdvcmRlbiBuaWV0IG1lZWdlbm9tZW4sIHppZSBpc3N1ZSAjNTAKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCi8vIEIwMDIKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCmNvbnN0IGNvcnJlY3RlQWFudnJhZ2VyID0gKCkgPT4gYW5kKCJCMDAyLkJSMDEiLCBhYW52cmFnZXIuZWlnZW5zY2hhcHBlbi52b2xkb2V0QWFuQmV2b2VnZGhlaWRzZWlzZW4sIC8vQjAwMi5CUjAxLjEKYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uZ3JhYWRCYWNoYWxvclZvZXJlbiwgLy9CMDAyLkJSMDEuMgp2b29yd2FhcmRlbkRpZW5zdHZlcmJhbmQsIC8vQjAwMi5CUjAxLjMKdm9vcndhYXJkZW5BYW50YWxLZWVyU3Vic2lkaWVBYW5nZXZyYWFnZCwgLy9CMDAyLkJSMDEuNAp2b29yd2FhcmRlbldlcmt6YWFtaGVkZW4gLy9CMDAyLkJSMDEuNQopOwpjb25zdCB0d2FhbGZNYWFuZGVuVGVydWcgPSBuZXcgRGF0ZShwcmV2aW91c0Jsb2NrVGltZXN0YW1wKTsKdHdhYWxmTWFhbmRlblRlcnVnLnNldFVUQ01vbnRoKHR3YWFsZk1hYW5kZW5UZXJ1Zy5nZXRVVENNb250aCgpIC0gMTIpOwppZiAoYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4udmVybGVkZW5EaWVuc3R2ZXJiYW5kZW4gPT09IHVuZGVmaW5lZCkgewogICAgYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4udmVybGVkZW5EaWVuc3R2ZXJiYW5kZW4gPSBbXTsKfQpjb25zdCBhZmdlbG9wZW4xMk1hYW5kZW5XZXJrZ2V2ZXJzID0gYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4udmVybGVkZW5EaWVuc3R2ZXJiYW5kZW4uZmlsdGVyKChkaWVuc3RWZXJiYW5kKSA9PiBkaWVuc3RWZXJiYW5kLmVpbmREYXR1bSA+IHR3YWFsZk1hYW5kZW5UZXJ1Zy5nZXRUaW1lKCkpOyAvL0IwMDIuQlIwNC4yCmNvbnN0IHZvb3J3YWFyZGVuRGllbnN0dmVyYmFuZCA9ICgpID0+IG9yKCJCMDAyLkJSMDIiLCAvL1plbGZkZSBhbHMgQjAwMi5CUjA0LCB6aWUgaXNzdWUgIzUxCmFhbnZyYWdlci53ZXJrZ2V2ZXIgIT09IG51bGwsIC8vQjAwMi5CUjAyLjEKYWZnZWxvcGVuMTJNYWFuZGVuV2Vya2dldmVycy5sZW5ndGggPiAwIC8vQjAwMi5CUjAyLjIKKTsKY29uc3QgYWxsZVdlcmtnZXZlcnMgPSBhZmdlbG9wZW4xMk1hYW5kZW5XZXJrZ2V2ZXJzLm1hcCgoZGllbnN0dmVyYmFuZCkgPT4gZGllbnN0dmVyYmFuZC53ZXJrZ2V2ZXIpOwppZiAoYWFudnJhZ2VyLndlcmtnZXZlciAhPT0gbnVsbCkgewogICAgYWxsZVdlcmtnZXZlcnMucHVzaChhYW52cmFnZXIud2Vya2dldmVyKTsKfQpjb25zdCB3ZXJrZ2V2ZXJzID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAic2Nob2xlbiIsICJXSEVSRSBpZCA9IEFOWSgkMSk7IiwgW2FsbGVXZXJrZ2V2ZXJzXSkpLnJvd3M7CmNvbnN0IHZvb3J3YWFyZGVuV2Vya3phYW1oZWRlbiA9ICgpID0+IGFuZCgiQjAwMi5CUjAzIiwgdm9vcndhYXJkZW5SZWNlbnRlV2Vya3phYW1oZWRlbiwgLy9CMDAyLkJSMDMuMQp2b29yd2FhcmRlbldlcmtpbmRlbGluZywgLy9CMDAyLkJSMDMuMgovL1dlIGtpamtlbiBvZiBlciBtaW5pbWFhbCAxIHZvbGRvZXQsIGdlemllbiBkZSAnb25kZXJ3aWpzV2Vya2dldmVyJyBuYWFyIG1lZXJkZXJlIGthbiB2ZXJ3aWp6ZW4KKCkgPT4gb3IoIkIwMDIuQlIwOCIsIC4uLndlcmtnZXZlcnMubWFwKCh3ZXJrZ2V2ZXIpID0+IG9uZGVyd2lqc1dlcmtnZXZlclZvbGRvZXQod2Vya2dldmVyKSkpIC8vQjAwMi5CUjAzLjMKKTsKY29uc3Qgdm9vcndhYXJkZW5SZWNlbnRlV2Vya3phYW1oZWRlbiA9ICgpID0+IG9yKCJCMDAyLkJSMDQiLCBhYW52cmFnZXIud2Vya2dldmVyICE9PSBudWxsLCAvL0IwMDIuQlIwNC4xCmFmZ2Vsb3BlbjEyTWFhbmRlbldlcmtnZXZlcnMubGVuZ3RoID4gMCAvL0IwMDIuQlIwNC4yCik7CmNvbnN0IHZvb3J3YWFyZGVuV2Vya2luZGVsaW5nID0gKCkgPT4gb3IoIkIwMDIuQlIwNSIsIHZvb3J3YWFyZGVuV2Vya3RpamQsIC8vQjAwMi5CUjA1LjEKdWl0Z2V6b25kZXJkZUZ1bmN0aWUgLy9CMDAyLkJSMDUuMgopOwpjb25zdCB2b29yd2FhcmRlbldlcmt0aWpkID0gKCkgPT4gYW5kKCJCMDAyLkJSMDYiLCBhYW52cmFnZXIuZWlnZW5zY2hhcHBlbi50d2ludGlnUHJvY2VudExlc2dlYm9uZGVuVGFrZW4sIC8vQjAwMi5CUjA2LjEKYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4ucGVkYWdvZ2lzY2hEaWRhY3Rpc2NoVmVyYW50d29vcmRlbGlqayAvL0IwMDIuQlIwNi4yCik7CmNvbnN0IHVpdGdlem9uZGVyZGVGdW5jdGllID0gKCkgPT4gb3IoIkIwMDIuQlIwNyIsIGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLmFtYnVsYW50QmVnZWxlaWRlciwgLy9CMDAyLkJSMDcuMQphYW52cmFnZXIuZWlnZW5zY2hhcHBlbi56b3JnY2/DtnJkaW5hdG9yLCAvL0IwMDIuQlIwNy4yCmFhbnZyYWdlci5laWdlbnNjaGFwcGVuLmludGVybmVCZWdlbGVpZGVyLCAvL0IwMDIuQlIwNy4zCmFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnJlbWVkaWFsVGVhY2hlciAvL0IwMDIuQlIwNy40Cik7CmNvbnN0IG9uZGVyd2lqc1dlcmtnZXZlclZvbGRvZXQgPSAod2Vya2dldmVyKSA9PiAvL0IwMDIuQlIwOCB3b3JkIGFsIGluIFNjaG9vbEFhbnBhc3NlbiBnZWRhYW4sIGNvbnRyb2xlZXIgaGllciBhbGxlZW4gaGV0IHJlc3VsdGFhdAogd2Vya2dldmVyLmxhYXRzdF92b2xkZWVkICE9PSBudWxsICYmICggLy9EZXplIHdlcmtnZXZlciBoZWVmdCBvb2l0IHZvbGRhYW4Kd2Vya2dldmVyLmxhYXRzdF92b2xkZWVkID49IHR3YWFsZk1hYW5kZW5UZXJ1Zy5nZXRUaW1lKCkgfHwgLy9EaXQgd2FzIGluIGRlIGFmZ2Vsb3BlbiAxMiBtYWFuZGVuCiAgICB3ZXJrZ2V2ZXIubGFhdHN0X3ZvbGRlZWQgPiB3ZXJrZ2V2ZXIubGFhdHN0X25pZXRfdm9sZGVlZCk7IC8vT2YgaXMgbm9nIHN0ZWVkcyBoZXQgZ2V2YWwKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCi8vIEIwMDYKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCmxldCBtYXhTdWJzaWRpZUJlZHJhZ0NlbnRlbjsKLy9CMDA2LkJSMDU6IEthbiBwZXIgamFhciBiZWRyYWcgaW5zdGVsbGVuCmNvbnN0IG1heFRlVmVyZ29lZGVuQ29sbGVnZWdlbGQgPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJtYXhfdmVyZ29lZF9jb2xsZWdlZ2VsZCIsICJXSEVSRSBqYWFyID0gJDE7IiwgW3BheWxvYWQuamFhcl0pKS5yb3dzWzBdOwppZiAobWF4VGVWZXJnb2VkZW5Db2xsZWdlZ2VsZCAhPT0gdW5kZWZpbmVkICYmIHN0dWRpZS5laWdlbnNjaGFwcGVuLmNvbGxlZ2VHZWxkQ2VudGVuICE9PSB1bmRlZmluZWQpIHsKICAgIGNvbnN0IG1heENvbGxlZ2VHZWxkQ2VudGVuID0gTWF0aC5taW4oLy9CMDA2LkJSMgogICAgc3R1ZGllLmVpZ2Vuc2NoYXBwZW4uY29sbGVnZUdlbGRDZW50ZW4sIC8vQjAwNi5CUjIuMQogICAgbWF4VGVWZXJnb2VkZW5Db2xsZWdlZ2VsZC5iZWRyYWdfY2VudGVuIC8vQjAwNi5CUjIuMgogICAgKTsKICAgIGNvbnN0IHBlcmNlbnRhZ2VDb2xsZWdlZ2VsZCA9IDEwOyAvL0IwMDYuQlI5CiAgICBjb25zdCB2YXJpYWJsZVZlcmdvZWRpbmdDZW50ZW4gPSBNYXRoLnJvdW5kKC8vQjAwNi5CUjYKICAgIHN0dWRpZS5laWdlbnNjaGFwcGVuLmNvbGxlZ2VHZWxkQ2VudGVuICogLy9CMDA2LkJSNi4xCiAgICAgICAgcGVyY2VudGFnZUNvbGxlZ2VnZWxkIC8gMTAwKTsgLy9CMDA2LkJSNi4yCiAgICBjb25zdCBtYXhWZXJnb2VkZVJlaXNrb3N0ZW5DZW50ZW4gPSAzNTAgKiAxMDA7IC8vQjAwNi5CUjgKICAgIGNvbnN0IG1heFJlaXNrb3N0ZW5DZW50ZW4gPSBNYXRoLm1pbigvL0IwMDYuQlI0CiAgICB2YXJpYWJsZVZlcmdvZWRpbmdDZW50ZW4sIC8vQjAwNi5CUjQuMQogICAgbWF4VmVyZ29lZGVSZWlza29zdGVuQ2VudGVuIC8vQjAwNi5CUjQuMgogICAgKTsKICAgIGNvbnN0IG1heFZlcmdvZWRlU3R1ZGllbWlkZGVsZW5DZW50ZW4gPSAzNTAgKiAxMDA7IC8vQjAwNi5CUjcKICAgIGNvbnN0IG1heFN0dWRpZU1pZGRlbGVuQ2VudGVuID0gTWF0aC5taW4oLy9CMDA2LkJSMwogICAgdmFyaWFibGVWZXJnb2VkaW5nQ2VudGVuLCAvL0IwMDYuQlIzLjEKICAgIG1heFZlcmdvZWRlU3R1ZGllbWlkZGVsZW5DZW50ZW4gLy9CMDA2LkJSMy4yCiAgICApOwogICAgbWF4U3Vic2lkaWVCZWRyYWdDZW50ZW4gPSBtYXhDb2xsZWdlR2VsZENlbnRlbiArIG1heFJlaXNrb3N0ZW5DZW50ZW4gKyBtYXhTdHVkaWVNaWRkZWxlbkNlbnRlbjsgLy9CMDA2LkJSMTsKfQovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KLy8gQjEwMQovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KY29uc3QgYnVkZ2V0U2VjdG9yID0gYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uc2VjdG9yID09PSAiUE8iIHx8IGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIlBTTyIKICAgIHx8IGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIlZTTyIgPyAiUE9lblBTT2VuVlNPIiA6IGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvcjsKLy9CMDAxLkJSMDE6IGJlc2NoaWtiYXJlIGJ1ZGdldCBiZWdpbnQgYWxzIHN1YnNpZGllcGxhZm9uZCwgd29yZHQgdGVsa2VucyB2ZXJsYWFndCBhbHMgc3Vic2lkaWUgd29yZHQgdG9lZ2VrZW50CmNvbnN0IGJ1ZGdldCA9IChhd2FpdCBxdWVyeSgiU0VMRUNUIiwgImJ1ZGdldCIsICJXSEVSRSBqYWFyID0gJDEgQU5EIHNlY3RvciA9ICQyOyIsIFtwYXlsb2FkLmphYXIsIGJ1ZGdldFNlY3Rvcl0pKS5yb3dzWzBdOwpjb25zdCBiZXNjaGlrYmFyZUJ1ZGdldENlbnRlbiA9ICgpID0+IHsKICAgIGxldCByZXN1bHQ7CiAgICBpZiAoYnVkZ2V0ICE9PSB1bmRlZmluZWQpIHsKICAgICAgICBpZiAodmVydm9sZ0FhbnZyYWFnKSB7CiAgICAgICAgICAgIC8vSXMgZWVuIHZlcnZvbGcgYWFudnJhYWcsIHZvbGxlZGlnZSBidWRnZXQgaXMgYmVzY2hpa2JhYXIgKC0gd2F0IGlzIHVpdGdlZ2V2ZW4pCiAgICAgICAgICAgIHJlc3VsdCA9IGJ1ZGdldC5iZXNjaGlrYmFhcl90b3RhYWxfY2VudGVuIC0gYnVkZ2V0LnVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbjsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIC8vSXMgZWVuIG5pZXV3ZSBhYW52cmFhZywgdmVydm9sZyBidWRnZXQgdmFuIGhldCB0b3RhYWwgYWYgaGFsZW4KICAgICAgICAgICAgcmVzdWx0ID0gKGJ1ZGdldC5iZXNjaGlrYmFhcl90b3RhYWxfY2VudGVuIC0gYnVkZ2V0LmJlc2NoaWtiYWFyX3ZlcnZvbGdfY2VudGVuKSAtCiAgICAgICAgICAgICAgICAvL0dlZGVlbHRlIHdhdCBuaWV0IGFsIGlzIHVpdGdlZ2V2ZW4sIG1hYXIgYWxsZWVuIHZvb3IgdmVydm9sZyBiZXNjaGlrYmFhciBpcy4KICAgICAgICAgICAgICAgIChidWRnZXQudWl0Z2VnZXZlbl90b3RhYWxfY2VudGVuIC0gYnVkZ2V0LnVpdGdlZ2V2ZW5fdmVydm9sZ19jZW50ZW4pOwogICAgICAgIH0KICAgIH0KICAgIHJldHVybiB7IHJlc3VsdCwgdW5rbm93bjogcmVzdWx0ID09PSB1bmRlZmluZWQgPyBbIkIwMDEuQlIwMSJdIDogW10sIHByb2JsZW1zOiBbXSB9Owp9OwovLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KLy8gUmVzdWx0YWF0Ci8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwpjb25zdCB0b2V3aWp6ZW4gPSBhbmQoIkIwMDguQlIwMiIsIHBheWxvYWQuamFhciA+PSBuZXcgRGF0ZShwcmV2aW91c0Jsb2NrVGltZXN0YW1wKS5nZXRVVENGdWxsWWVhcigpLCAvL0IwMDguQlIwMi4xOiBCMDAxCmNvcnJlY3RlQWFudnJhZ2VyLCAvL0IwMDguQlIwMi4yOiBCMDAyCnN0dWRpZVZvbGRvZXQsIC8vQjAwOC5CUjAyLjM6IEIwMDQKLy9CMDA4LkJSMDIuNDogQW5kZXJlIHJlZ2VsaW5nIHdvcmR0IG5pZXQgbWVlZ2Vub21lbiwgemllIGlzc3VlICM1MAooKSA9PiBjb21wYXJlKCJCMDA4LkJSMDIuNSIsIChhLCBiKSA9PiBhID49IGIsIGJlc2NoaWtiYXJlQnVkZ2V0Q2VudGVuLCBtYXhTdWJzaWRpZUJlZHJhZ0NlbnRlbikgLy9CMDA4LkJSMDIuNTogQjAwNiAmIEIxMDEKKTsKaWYgKHRvZXdpanplbi5yZXN1bHQgPT09IGZhbHNlKSB7CiAgICAvL0RlIGFhbnZyYWFnIGlzIGFmZ2V3ZXplbiBvbSBkZSB2b2xnZW5kZSByZWRlbmVuOgogICAgcmV0dXJuIGBBZmdld2V6ZW46ICR7QXJyYXkuZnJvbShuZXcgU2V0KHRvZXdpanplbi5wcm9ibGVtcykpLnRvU3RyaW5nKCl9YDsKfQplbHNlIGlmICh0b2V3aWp6ZW4ucmVzdWx0ID09PSB1bmRlZmluZWQpIHsKICAgIC8vRGUgdm9sZ2VuZGUgaW5mb3JtYXRpZSBpcyBub2cgb25iZWtlbmQsIGR1cyBrYW4gbm9nIG5pZXQgd29yZGVuIGdvZWRnZWtldXJkOgogICAgcmV0dXJuIGBPbnRicmVla3Q6ICR7QXJyYXkuZnJvbShuZXcgU2V0KHRvZXdpanplbi51bmtub3duKSkudG9TdHJpbmcoKX1gOwp9CmVsc2UgewogICAgLy9EZSBhYW52cmFhZyBpcyBnb2VkZ2VrZXVyZAogICAgYXdhaXQgcXVlcnkoIklOU0VSVCIsICJzdWJzaWRpZXMiLCAiKGRvY2VudCwgb3BsZWlkaW5nLCBqYWFyLCB2ZXJ2b2xnX2FhbnZyYWFnLCBhYW52cmFhZ190aWpkLCAiICsKICAgICAgICAiYmVkcmFnX2NlbnRlbiwgc2VjdG9yKSBWQUxVRVMgKCQxLCAkMiwgJDMsICQ0LCAkNSwgJDYsICQ3KTsiLCBbZnJvbSwgYmluYXJ5T3BsZWlkaW5nLCBwYXlsb2FkLmphYXIsIHZlcnZvbGdBYW52cmFhZywgcHJldmlvdXNCbG9ja1RpbWVzdGFtcCwgbWF4U3Vic2lkaWVCZWRyYWdDZW50ZW4sIGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3Rvcl0pOwogICAgYXdhaXQgcXVlcnkoIlVQREFURSIsICJidWRnZXQiLCAiU0VUIHVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbiA9IHVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbiArICQzLCAiICsKICAgICAgICAidWl0Z2VnZXZlbl92ZXJ2b2xnX2NlbnRlbiA9IEdSRUFURVNUKHVpdGdlZ2V2ZW5fdmVydm9sZ19jZW50ZW4gKyAkNCwgYmVzY2hpa2JhYXJfdmVydm9sZ19jZW50ZW4pIFdIRVJFIGphYXIgPSAkMSBBTkQgc2VjdG9yID0gJDI7IiwgW3BheWxvYWQuamFhciwgYnVkZ2V0U2VjdG9yLCBtYXhTdWJzaWRpZUJlZHJhZ0NlbnRlbiwgdmVydm9sZ0FhbnZyYWFnID8gbWF4U3Vic2lkaWVCZWRyYWdDZW50ZW4gOiAwXSk7CiAgICByZXR1cm4gIk9LIjsKfQ==
+
+Init as text:
+
+Code as text:
+//Kijk of iets aan alle (sub)voorwaarden voldoet. Zo niet geef terug aan welke (sub)voorwaarden niet wordt voldaan.
+const and = (bro, ...args) => {
+    let unknown = []; //Alles wat nog onbekend is.
+    let problems = []; //Alles waar niet aan wordt voldaan.
+    let result = true;
+    let badNonFunction = false;
+    //Voor alle argumenten kijken of het een subfunctie is (die wordt uitgevoerd) of of het voldoet
+    for (let arg of args) {
+        if (typeof arg === "function") {
+            const argResult = arg();
+            unknown.push(...argResult.unknown);
+            problems.push(...argResult.problems);
+            arg = argResult.result;
+        }
+        else if (arg !== true) {
+            badNonFunction = true;
+        }
+        if (arg === undefined && result !== false) { //Informatie ontbreekt nog, dus kan nog niet goedkeuren
+            result = undefined;
+        }
+        else if (arg === false) { //Informatie geeft aan dat er niet wordt voldaan, ongeacht de rest
+            result = false;
+            //We willen in de foutmelding wel alles wat fout gaat, dus ga verder
+        }
+    }
+    //Geef door aan welke onderdelen niet wordt voldaan
+    if (badNonFunction) {
+        if (result === undefined) {
+            unknown.push(bro);
+        }
+        else if (result === false) {
+            problems.push(bro);
+        }
+    }
+    if (result === true) {
+        unknown = [];
+        problems = [];
+    }
+    return { result, unknown, problems };
+};
+//Kijk of iets aan een (sub)voorwaarden voldoet. Zo niet geef terug aan welke (sub)voorwaarden niet wordt voldaan.
+const or = (bro, ...args) => {
+    let unknown = []; //Alles wat nog onbekend is.
+    let problems = []; //Alles waar niet aan wordt voldaan.
+    let result = false;
+    let badNonFunction = false;
+    //Voor alle argumenten kijken of het een subfunctie is (die wordt uitgevoerd) of of het voldoet
+    for (let arg of args) {
+        if (typeof arg === "function") {
+            const argResult = arg();
+            arg = argResult.result;
+            unknown.push(...argResult.unknown);
+            problems.push(...argResult.problems);
+        }
+        else if (arg !== true) {
+            badNonFunction = true;
+        }
+        if (arg === undefined) { //Informatie ontbreekt nog, dus kan nog niet goedkeuren
+            result = undefined;
+        }
+        else if (arg === true) { //Informatie geeft aan dat er aan wordt voldaan, ongeacht de rest
+            result = true;
+            break; //We weten al dat het totaal goed is, dus ga niet verder.
+        }
+    }
+    //Geef door aan welke onderdelen niet wordt voldaan
+    if (badNonFunction) {
+        if (result === undefined) {
+            unknown.push(bro);
+        }
+        else if (result === false) {
+            problems.push(bro);
+        }
+    }
+    if (result === true) {
+        unknown = [];
+        problems = [];
+    }
+    return { result, unknown, problems };
+};
+//Kijk of iets ergens aan voldoet.
+const compare = (bro, comp, a, b) => {
+    let unknown = []; //Alles wat nog onbekend is.
+    let problems = []; //Alles waar niet aan wordt voldaan.
+    let result;
+    if (typeof a === "function") {
+        const tempa = a();
+        a = tempa.result;
+        unknown.push(...tempa.unknown);
+        problems.push(...tempa.problems);
+    }
+    if (typeof b === "function") {
+        const tempb = b();
+        b = tempb.result;
+        unknown.push(...tempb.unknown);
+        problems.push(...tempb.problems);
+    }
+    if (a !== undefined && b !== undefined) {
+        result = comp(a, b);
+    }
+    if (result === true) {
+        unknown = [];
+        problems = [];
+    }
+    else if (result === false) {
+        problems.push(bro);
+    }
+    else {
+        unknown.push(bro);
+    }
+    return { result, unknown, problems };
+};
+if (payload.jaar > 2147483647) {
+    return "Ongeldig jaar.";
+}
+//Opleiding die wordt aangevraagt
+const binaryOpleiding = Buffer.from(payload.opleiding, "hex");
+const studie = (await query("SELECT", "opleidingen", "WHERE id = $1;", [binaryOpleiding])).rows[0];
+if (studie === undefined) {
+    return "Aangevraagde opleiding bestaat niet.";
+}
+//De aanvrager
+const aanvrager = (await query("SELECT", "docenten", "WHERE id = $1;", [from])).rows[0];
+if (aanvrager === undefined) {
+    return "Vraag uw (ex-)werkgever om u als leraar toe te voegen om een subsidieaanvraag te kunnen doen.";
+}
+//Alle subsidies die je hebt aangevraagt (exclusief huidige aanvraag en geannnuleerde aanvragen)
+const subsidies = (await query("SELECT", "subsidies", "JOIN opleidingen ON " +
+    "subsidies.opleiding = opleidingen.id WHERE docent = $1 AND geannuleerd = false;", [from])).rows;
+//Alle subsidies voor de huidige opleiding gesorteerd op jaar
+const huidigeSubsidies = subsidies
+    .filter((subsidie) => subsidie.opleiding.equals(binaryOpleiding))
+    .sort((subsidie1, subsidie2) => subsidie1.jaar - subsidie2.jaar);
+const vervolgAanvraag = huidigeSubsidies.length !== 0;
+//Alle oude subsidies en opleidingen
+const oudeSubsidies = subsidies.filter((subsidie) => !subsidie.opleiding.equals(binaryOpleiding));
+const aantalOudeOpleidingen = new Set(oudeSubsidies.map((oudeSubsidie) => oudeSubsidie.opleiding)).size;
+/////////////////////////////////////////////////////////////////////////////////
+// B004
+/////////////////////////////////////////////////////////////////////////////////
+const studieVoldoet = () => and("B004.BR01", studieVoldoetOpleidingssoort, //B004.BR01.1
+studieJuisteLand, //B004.BR01.2
+studieJuisteStatus //B004.BR01.3
+);
+const studieVoldoetOpleidingssoort = () => or("B004.BR02", studie.eigenschappen.bachelor, //B004.BR02.1
+studie.eigenschappen.master, //B004.BR02.2
+studie.eigenschappen.deficiëntieopleiding //B004.BR02.3
+);
+const studieJuisteLand = () => or("B004.BR03", studie.eigenschappen.inNederland, //B004.BR03.1
+studie.eigenschappen.inEU, //B004.BR03.2
+studie.eigenschappen.inAruba, //B004.BR03.3
+studie.eigenschappen.inSintMaarten, //B004.BR03.4
+studie.eigenschappen.inCuraçao, //B004.BR03.5
+studie.eigenschappen.inEngland === true && previousBlockTimestamp > Date.UTC(2018, 2, 29) //Brexit update
+);
+const studieJuisteStatus = () => or("B004.BR04", studie.eigenschappen.NufficGelijkwaardigVerklaardeBuitenlands, //B004.BR04.1
+studie.eigenschappen.NVOgeaccrediteerd //B004.BR04.2
+);
+/////////////////////////////////////////////////////////////////////////////////
+// B003
+/////////////////////////////////////////////////////////////////////////////////
+const voorwaardenAantalKeerSubsidieAangevraagd = () => {
+    return and("B003.BR01", () => compare("B003.BR01.1", (a, b) => a > b, maximaalSubsiedieJaren, aantalVerstrekenSubsidiejaren()), () => compare("B003.BR01.2", (a, b) => a <= b, payload.jaar, uitersteSubsidiejaar), maximaalOpleidingenSubsidie, //B003.BR01.3
+    subsidies.find((subsidie) => subsidie.jaar === payload.jaar) === undefined); //Toevoeging: Mag 1 subsidie per jaar
+};
+const maximaalSubsiedieJaren = () => {
+    let result;
+    if (studie.eigenschappen.EC !== undefined) {
+        if (studie.eigenschappen.EC >= 30 && studie.eigenschappen.EC < 60) {
+            result = 1;
+        }
+        else if (studie.eigenschappen.EC === 60) {
+            result = 2;
+        }
+        else if (studie.eigenschappen.EC > 60) {
+            result = 3;
+        }
+        else {
+            result = 0;
+        }
+    }
+    return { result, unknown: result === undefined ? ["B003.BR02"] : [], problems: [] };
+};
+const aantalVerstrekenSubsidiejaren = () => huidigeSubsidies.filter((subsidie) => and("B003.BR03", () => subsidieIsToegekent(subsidie), //B003.BR03.1
+() => subsidieIsVerbruikt(subsidie) //B003.BR03.2
+)).length;
+const subsidieIsToegekent = (subsidie) => or("B003.BR04", subsidie !== undefined, //B003.BR04.1, subsidies worden gelijk toegekent dus bekijk toegekende subsidies
+oudeSubsidies.some((opleiding) => opleiding.eigenschappen.deficiëntieopleiding === true) //B003.BR04.2
+);
+const subsidieIsVerbruikt = (subsidie) => and("B003.BR05", subsidie !== undefined, //B003.BR05.1, subsidies worden gelijk toegekent dus bekijk toegekende subsidies
+!subsidie.geannuleerd //B003.BR05.2, we selecteren al geen geannuleerde aanvragen want 'deze hebben nooit plaatsgevonden'
+);
+const uitersteSubsidiejaar = () => {
+    const periode = beursperiode();
+    if (periode.result === undefined) {
+        return periode;
+    }
+    else {
+        const result = (vervolgAanvraag ? huidigeSubsidies[0].jaar : payload.jaar) //B003.BR06.1
+            + periode.result; //B003.BR06.2
+        return { result, unknown: [], problems: [] };
+    }
+};
+const beursperiode = () => {
+    let result;
+    if (studie.eigenschappen.EC !== undefined) {
+        if (studie.eigenschappen.EC >= 30 && studie.eigenschappen.EC < 60) {
+            result = 0; //Hier heb je een off-by-one error als je het schema volgt
+        }
+        else if (studie.eigenschappen.EC === 60) {
+            result = 3;
+        }
+        else if (studie.eigenschappen.EC > 60) {
+            result = 5;
+        }
+        else {
+            result = 0;
+        }
+    }
+    return { result, unknown: result === undefined ? ["B003.BR07"] : [], problems: [] };
+};
+const maximaalOpleidingenSubsidie = () => or("B003.BR08", aantalOudeOpleidingen === 0, //B003.BR08.1
+//Als het aantal oude opleidingen 1 is gaan alle oude subsidies over dezelfde opleiding, dus pak gewoon de eerste
+aantalOudeOpleidingen !== 1 ? false : studie.eigenschappen.master === undefined ? undefined :
+    studie.eigenschappen.master && oudeSubsidies[0].eigenschappen.bachelor, //B003.BR08.2
+aantalOudeOpleidingen !== 1 ? false : studie.eigenschappen.master === undefined ? undefined :
+    studie.eigenschappen.master && oudeSubsidies[0].eigenschappen.deficiëntieopleiding, //B003.BR08.3
+false //B003.BR08.4 wordt niet meegenomen, zie issue #50
+);
+//B003.BR09 & B003.BR10 worden niet meegenomen, zie issue #50
+/////////////////////////////////////////////////////////////////////////////////
+// B002
+/////////////////////////////////////////////////////////////////////////////////
+const correcteAanvrager = () => and("B002.BR01", aanvrager.eigenschappen.voldoetAanBevoegdheidseisen, //B002.BR01.1
+aanvrager.eigenschappen.graadBachalorVoeren, //B002.BR01.2
+voorwaardenDienstverband, //B002.BR01.3
+voorwaardenAantalKeerSubsidieAangevraagd, //B002.BR01.4
+voorwaardenWerkzaamheden //B002.BR01.5
+);
+const twaalfMaandenTerug = new Date(previousBlockTimestamp);
+twaalfMaandenTerug.setUTCMonth(twaalfMaandenTerug.getUTCMonth() - 12);
+if (aanvrager.eigenschappen.verledenDienstverbanden === undefined) {
+    aanvrager.eigenschappen.verledenDienstverbanden = [];
+}
+const afgelopen12MaandenWerkgevers = aanvrager.eigenschappen.verledenDienstverbanden.filter((dienstVerband) => dienstVerband.eindDatum > twaalfMaandenTerug.getTime()); //B002.BR04.2
+const voorwaardenDienstverband = () => or("B002.BR02", //Zelfde als B002.BR04, zie issue #51
+aanvrager.werkgever !== null, //B002.BR02.1
+afgelopen12MaandenWerkgevers.length > 0 //B002.BR02.2
+);
+const alleWerkgevers = afgelopen12MaandenWerkgevers.map((dienstverband) => dienstverband.werkgever);
+if (aanvrager.werkgever !== null) {
+    alleWerkgevers.push(aanvrager.werkgever);
+}
+const werkgevers = (await query("SELECT", "scholen", "WHERE id = ANY($1);", [alleWerkgevers])).rows;
+const voorwaardenWerkzaamheden = () => and("B002.BR03", voorwaardenRecenteWerkzaamheden, //B002.BR03.1
+voorwaardenWerkindeling, //B002.BR03.2
+//We kijken of er minimaal 1 voldoet, gezien de 'onderwijsWerkgever' naar meerdere kan verwijzen
+() => or("B002.BR08", ...werkgevers.map((werkgever) => onderwijsWerkgeverVoldoet(werkgever))) //B002.BR03.3
+);
+const voorwaardenRecenteWerkzaamheden = () => or("B002.BR04", aanvrager.werkgever !== null, //B002.BR04.1
+afgelopen12MaandenWerkgevers.length > 0 //B002.BR04.2
+);
+const voorwaardenWerkindeling = () => or("B002.BR05", voorwaardenWerktijd, //B002.BR05.1
+uitgezonderdeFunctie //B002.BR05.2
+);
+const voorwaardenWerktijd = () => and("B002.BR06", aanvrager.eigenschappen.twintigProcentLesgebondenTaken, //B002.BR06.1
+aanvrager.eigenschappen.pedagogischDidactischVerantwoordelijk //B002.BR06.2
+);
+const uitgezonderdeFunctie = () => or("B002.BR07", aanvrager.eigenschappen.ambulantBegeleider, //B002.BR07.1
+aanvrager.eigenschappen.zorgcoördinator, //B002.BR07.2
+aanvrager.eigenschappen.interneBegeleider, //B002.BR07.3
+aanvrager.eigenschappen.remedialTeacher //B002.BR07.4
+);
+const onderwijsWerkgeverVoldoet = (werkgever) => //B002.BR08 word al in SchoolAanpassen gedaan, controleer hier alleen het resultaat
+ werkgever.laatst_voldeed !== null && ( //Deze werkgever heeft ooit voldaan
+werkgever.laatst_voldeed >= twaalfMaandenTerug.getTime() || //Dit was in de afgelopen 12 maanden
+    werkgever.laatst_voldeed > werkgever.laatst_niet_voldeed); //Of is nog steeds het geval
+/////////////////////////////////////////////////////////////////////////////////
+// B006
+/////////////////////////////////////////////////////////////////////////////////
+let maxSubsidieBedragCenten;
+//B006.BR05: Kan per jaar bedrag instellen
+const maxTeVergoedenCollegegeld = (await query("SELECT", "max_vergoed_collegegeld", "WHERE jaar = $1;", [payload.jaar])).rows[0];
+if (maxTeVergoedenCollegegeld !== undefined && studie.eigenschappen.collegeGeldCenten !== undefined) {
+    const maxCollegeGeldCenten = Math.min(//B006.BR2
+    studie.eigenschappen.collegeGeldCenten, //B006.BR2.1
+    maxTeVergoedenCollegegeld.bedrag_centen //B006.BR2.2
+    );
+    const percentageCollegegeld = 10; //B006.BR9
+    const variableVergoedingCenten = Math.round(//B006.BR6
+    studie.eigenschappen.collegeGeldCenten * //B006.BR6.1
+        percentageCollegegeld / 100); //B006.BR6.2
+    const maxVergoedeReiskostenCenten = 350 * 100; //B006.BR8
+    const maxReiskostenCenten = Math.min(//B006.BR4
+    variableVergoedingCenten, //B006.BR4.1
+    maxVergoedeReiskostenCenten //B006.BR4.2
+    );
+    const maxVergoedeStudiemiddelenCenten = 350 * 100; //B006.BR7
+    const maxStudieMiddelenCenten = Math.min(//B006.BR3
+    variableVergoedingCenten, //B006.BR3.1
+    maxVergoedeStudiemiddelenCenten //B006.BR3.2
+    );
+    maxSubsidieBedragCenten = maxCollegeGeldCenten + maxReiskostenCenten + maxStudieMiddelenCenten; //B006.BR1;
+}
+/////////////////////////////////////////////////////////////////////////////////
+// B101
+/////////////////////////////////////////////////////////////////////////////////
+const budgetSector = aanvrager.eigenschappen.sector === "PO" || aanvrager.eigenschappen.sector === "PSO"
+    || aanvrager.eigenschappen.sector === "VSO" ? "POenPSOenVSO" : aanvrager.eigenschappen.sector;
+//B001.BR01: beschikbare budget begint als subsidieplafond, wordt telkens verlaagt als subsidie wordt toegekent
+const budget = (await query("SELECT", "budget", "WHERE jaar = $1 AND sector = $2;", [payload.jaar, budgetSector])).rows[0];
+const beschikbareBudgetCenten = () => {
+    let result;
+    if (budget !== undefined) {
+        if (vervolgAanvraag) {
+            //Is een vervolg aanvraag, volledige budget is beschikbaar (- wat is uitgegeven)
+            result = budget.beschikbaar_totaal_centen - budget.uitgegeven_totaal_centen;
+        }
+        else {
+            //Is een nieuwe aanvraag, vervolg budget van het totaal af halen
+            result = (budget.beschikbaar_totaal_centen - budget.beschikbaar_vervolg_centen) -
+                //Gedeelte wat niet al is uitgegeven, maar alleen voor vervolg beschikbaar is.
+                (budget.uitgegeven_totaal_centen - budget.uitgegeven_vervolg_centen);
+        }
+    }
+    return { result, unknown: result === undefined ? ["B001.BR01"] : [], problems: [] };
+};
+/////////////////////////////////////////////////////////////////////////////////
+// Resultaat
+/////////////////////////////////////////////////////////////////////////////////
+const toewijzen = and("B008.BR02", payload.jaar >= new Date(previousBlockTimestamp).getUTCFullYear(), //B008.BR02.1: B001
+correcteAanvrager, //B008.BR02.2: B002
+studieVoldoet, //B008.BR02.3: B004
+//B008.BR02.4: Andere regeling wordt niet meegenomen, zie issue #50
+() => compare("B008.BR02.5", (a, b) => a >= b, beschikbareBudgetCenten, maxSubsidieBedragCenten) //B008.BR02.5: B006 & B101
+);
+if (toewijzen.result === false) {
+    //De aanvraag is afgewezen om de volgende redenen:
+    return `Afgewezen: ${Array.from(new Set(toewijzen.problems)).toString()}`;
+}
+else if (toewijzen.result === undefined) {
+    //De volgende informatie is nog onbekend, dus kan nog niet worden goedgekeurd:
+    return `Ontbreekt: ${Array.from(new Set(toewijzen.unknown)).toString()}`;
+}
+else {
+    //De aanvraag is goedgekeurd
+    await query("INSERT", "subsidies", "(docent, opleiding, jaar, vervolg_aanvraag, aanvraag_tijd, " +
+        "bedrag_centen, sector) VALUES ($1, $2, $3, $4, $5, $6, $7);", [from, binaryOpleiding, payload.jaar, vervolgAanvraag, previousBlockTimestamp, maxSubsidieBedragCenten, aanvrager.eigenschappen.sector]);
+    await query("UPDATE", "budget", "SET uitgegeven_totaal_centen = uitgegeven_totaal_centen + $3, " +
+        "uitgegeven_vervolg_centen = GREATEST(uitgegeven_vervolg_centen + $4, beschikbaar_vervolg_centen) WHERE jaar = $1 AND sector = $2;", [payload.jaar, budgetSector, maxSubsidieBedragCenten, vervolgAanvraag ? maxSubsidieBedragCenten : 0]);
+    return "OK";
+}

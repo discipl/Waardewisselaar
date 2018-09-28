@@ -1,9 +1,9 @@
 Type: SubsidieAanvraagAnnuleren
-Version: 1.0
+Version: 1.1
 Description: Leraar annuleert subsidie aanvraag.
-Template: {"opleiding":{"type":"hash","desc":"De opleiding van de subsidieaanvraag die wordt geannuleerd.","name":"Opleiding"},"jaar":{"type":"uint","desc":"Het jaar van de subsidieaanvraag die wordt geannuleerd.","name":"Jaar"}}
+Template: {"opleiding":{"type":"hash","desc":"De opleiding van de aanvraag die wordt geannuleerd.","name":"Opleiding"},"jaar":{"type":"uint","desc":"Het jaar van de aanvraag die wordt geannuleerd.","name":"Jaar"}}
 Init: 
-Code: aWYgKHBheWxvYWQuamFhciA+IDIxNDc0ODM2NDcpIHsKICAgIHJldHVybiAiT25nZWxkaWcgamFhci4iOwp9CmNvbnN0IGthbk5vZ0FubnVsZXJlblRpamQgPSBuZXcgRGF0ZShwcmV2aW91c0Jsb2NrVGltZXN0YW1wKTsKLy9CMDAzLkJSMDUuMjogS2FuIHRvdCAyIG1hYW5kZW4gbmEgYWFudnJhYWcgYW5udWxlcmVuCmthbk5vZ0FubnVsZXJlblRpamQuc2V0VVRDTW9udGgoa2FuTm9nQW5udWxlcmVuVGlqZC5nZXRVVENNb250aCgpIC0gMik7CmNvbnN0IGdlYW5udWxlZXJkID0gYXdhaXQgcXVlcnkoIlVQREFURSIsICJzdWJzaWRpZXMiLCAiU0VUIGdlYW5udWxlZXJkID0gdHJ1ZSBXSEVSRSBkb2NlbnQgPSAkMSBBTkQgIiArCiAgICAib3BsZWlkaW5nID0gJDIgQU5EIGphYXIgPSAkMyBBTkQgYWFudnJhYWdfdGlqZCA+PSAkNCBBTkQgZ2Vhbm51bGVlcmQgPSBmYWxzZTsiLCBbZnJvbSwgQnVmZmVyLmZyb20ocGF5bG9hZC5vcGxlaWRpbmcsICJoZXgiKSwgcGF5bG9hZC5qYWFyLCBrYW5Ob2dBbm51bGVyZW5UaWpkLmdldFRpbWUoKV0pOwppZiAoZ2Vhbm51bGVlcmQucm93Q291bnQgPT09IDApIHsKICAgIHJldHVybiAiQWFudnJhYWcgYmVzdGFhdCBuaWV0IG9mIGthbiBuaWV0IG1lZXIgd29yZGVuIGdlYW5udWxlZXJkLiI7Cn0KcmV0dXJuICJPSyI7
+Code: aWYgKHBheWxvYWQuamFhciA+IDIxNDc0ODM2NDcpIHsKICAgIHJldHVybiAiT25nZWxkaWcgamFhci4iOwp9Ci8vQWxsZSBzdWJzaWRpZWFhbnZyYWdlbiBnZXNvcnRlZXJkIG9wIGphYXIKY29uc3Qgc3Vic2lkaWVBYW52cmFnZW4gPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJzdWJzaWRpZXMiLCAiV0hFUkUgZG9jZW50ID0gJDEgQU5EIG9wbGVpZGluZyA9ICQyIEFORCBnZWFubnVsZWVyZCA9IGZhbHNlOyIsIFtmcm9tLCBCdWZmZXIuZnJvbShwYXlsb2FkLm9wbGVpZGluZywgImhleCIpXSkpLnJvd3M7CnN1YnNpZGllQWFudnJhZ2VuLnNvcnQoKGFhbnZyYWFnQSwgYWFudnJhYWdCKSA9PiBhYW52cmFhZ0EuamFhciAtIGFhbnZyYWFnQi5qYWFyKTsKY29uc3QgYWFudnJhYWcgPSBzdWJzaWRpZUFhbnZyYWdlbi5maW5kKChlZW5BYW52cmFhZykgPT4gZWVuQWFudnJhYWcuamFhciA9PT0gcGF5bG9hZC5qYWFyKTsKaWYgKGFhbnZyYWFnID09PSB1bmRlZmluZWQpIHsKICAgIHJldHVybiAiU3Vic2lkaWUgYWFudnJhYWcgYmVzdGFhdCBuaWV0LiI7Cn0KY29uc3Qga2FuTm9nQW5udWxlcmVuVGlqZCA9IG5ldyBEYXRlKHByZXZpb3VzQmxvY2tUaW1lc3RhbXApOwovL0IwMDMuQlIwNS4yOiBLYW4gdG90IDIgbWFhbmRlbiBuYSBhYW52cmFhZyBhbm51bGVyZW4Ka2FuTm9nQW5udWxlcmVuVGlqZC5zZXRVVENNb250aChrYW5Ob2dBbm51bGVyZW5UaWpkLmdldFVUQ01vbnRoKCkgKyAyKTsKaWYgKGFhbnZyYWFnLmFhbnZyYWFnX3RpamQgPiBrYW5Ob2dBbm51bGVyZW5UaWpkLmdldFRpbWUoKSkgewogICAgcmV0dXJuICJTdWJzaWRpZSBhYW52cmFhZyBrYW4gbmlldCBtZWVyIHdvcmRlbiBnZWFubnVsZWVyZC4iOwp9CmlmIChzdWJzaWRpZUFhbnZyYWdlbi5zb21lKChlZW5BYW52cmFhZykgPT4gZWVuQWFudnJhYWcuamFhciA+IHBheWxvYWQuamFhcikpIHsKICAgIHJldHVybiAiRXIgemlqbiBhbCB2ZXJ2b2xnIGFhbnZyYWdlbiB2b29yIGRlemUgYWFudnJhYWcsIGFubnVsZWVyIGRlemUgZWVyc3QuIjsKfQovL0FubnVsZWVyIGRlIGFhbnZyYWFnCmF3YWl0IHF1ZXJ5KCJVUERBVEUiLCAic3Vic2lkaWVzIiwgIlNFVCBnZWFubnVsZWVyZCA9IHRydWUgV0hFUkUgZG9jZW50ID0gJDEgQU5EICIgKwogICAgIm9wbGVpZGluZyA9ICQyIEFORCBqYWFyID0gJDM7IiwgW2FhbnZyYWFnLmRvY2VudCwgYWFudnJhYWcub3BsZWlkaW5nLCBhYW52cmFhZy5qYWFyXSk7Ci8vVmVyaG9vZyBiZXNjaGlrYmFyZSBidWRnZXQKbGV0IGJlZHJhZ0NlbnRlbiA9IGFhbnZyYWFnLmJlZHJhZ19jZW50ZW47CmlmIChhYW52cmFhZy5zdHVkaWV2ZXJsb2ZfYmVkcmFnY2VudGVuICE9PSBudWxsKSB7CiAgICBiZWRyYWdDZW50ZW4gKz0gYWFudnJhYWcuc3R1ZGlldmVybG9mX2JlZHJhZ2NlbnRlbjsKfQphd2FpdCBxdWVyeSgiVVBEQVRFIiwgImJ1ZGdldCIsICJTRVQgdWl0Z2VnZXZlbl90b3RhYWxfY2VudGVuID0gdWl0Z2VnZXZlbl90b3RhYWxfY2VudGVuICsgJDMsICIgKwogICAgInVpdGdlZ2V2ZW5fdmVydm9sZ19jZW50ZW4gPSB1aXRnZWdldmVuX3ZlcnZvbGdfY2VudGVuICsgJDQgV0hFUkUgamFhciA9ICQxIEFORCBzZWN0b3IgPSAkMjsiLCBbYWFudnJhYWcuamFhciwgYWFudnJhYWcuc2VjdG9yLCBiZWRyYWdDZW50ZW4sIGFhbnZyYWFnLnZlcnZvbGdfYWFudnJhYWcgPyBiZWRyYWdDZW50ZW4gOiAwXSk7CnJldHVybiAiT0siOw==
 
 Init as text:
 
@@ -11,12 +11,30 @@ Code as text:
 if (payload.jaar > 2147483647) {
     return "Ongeldig jaar.";
 }
+//Alle subsidieaanvragen gesorteerd op jaar
+const subsidieAanvragen = (await query("SELECT", "subsidies", "WHERE docent = $1 AND opleiding = $2 AND geannuleerd = false;", [from, Buffer.from(payload.opleiding, "hex")])).rows;
+subsidieAanvragen.sort((aanvraagA, aanvraagB) => aanvraagA.jaar - aanvraagB.jaar);
+const aanvraag = subsidieAanvragen.find((eenAanvraag) => eenAanvraag.jaar === payload.jaar);
+if (aanvraag === undefined) {
+    return "Subsidie aanvraag bestaat niet.";
+}
 const kanNogAnnulerenTijd = new Date(previousBlockTimestamp);
 //B003.BR05.2: Kan tot 2 maanden na aanvraag annuleren
-kanNogAnnulerenTijd.setUTCMonth(kanNogAnnulerenTijd.getUTCMonth() - 2);
-const geannuleerd = await query("UPDATE", "subsidies", "SET geannuleerd = true WHERE docent = $1 AND " +
-    "opleiding = $2 AND jaar = $3 AND aanvraag_tijd >= $4 AND geannuleerd = false;", [from, Buffer.from(payload.opleiding, "hex"), payload.jaar, kanNogAnnulerenTijd.getTime()]);
-if (geannuleerd.rowCount === 0) {
-    return "Aanvraag bestaat niet of kan niet meer worden geannuleerd.";
+kanNogAnnulerenTijd.setUTCMonth(kanNogAnnulerenTijd.getUTCMonth() + 2);
+if (aanvraag.aanvraag_tijd > kanNogAnnulerenTijd.getTime()) {
+    return "Subsidie aanvraag kan niet meer worden geannuleerd.";
 }
+if (subsidieAanvragen.some((eenAanvraag) => eenAanvraag.jaar > payload.jaar)) {
+    return "Er zijn al vervolg aanvragen voor deze aanvraag, annuleer deze eerst.";
+}
+//Annuleer de aanvraag
+await query("UPDATE", "subsidies", "SET geannuleerd = true WHERE docent = $1 AND " +
+    "opleiding = $2 AND jaar = $3;", [aanvraag.docent, aanvraag.opleiding, aanvraag.jaar]);
+//Verhoog beschikbare budget
+let bedragCenten = aanvraag.bedrag_centen;
+if (aanvraag.studieverlof_bedragcenten !== null) {
+    bedragCenten += aanvraag.studieverlof_bedragcenten;
+}
+await query("UPDATE", "budget", "SET uitgegeven_totaal_centen = uitgegeven_totaal_centen + $3, " +
+    "uitgegeven_vervolg_centen = uitgegeven_vervolg_centen + $4 WHERE jaar = $1 AND sector = $2;", [aanvraag.jaar, aanvraag.sector, bedragCenten, aanvraag.vervolg_aanvraag ? bedragCenten : 0]);
 return "OK";

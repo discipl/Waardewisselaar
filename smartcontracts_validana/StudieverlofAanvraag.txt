@@ -1,0 +1,241 @@
+Type: StudieverlofAanvraag
+Version: 1.0
+Description: Leraar vraagt studieverlof aan voor zijn werkgever.
+Template: {"jaar":{"type":"uint","desc":"Het jaar waarvoor het wordt aangevraagt.","name":"Jaar"}}
+Init: 
+Code: Ly9LaWprIG9mIGlldHMgYWFuIGFsbGUgKHN1Yil2b29yd2FhcmRlbiB2b2xkb2V0LiBabyBuaWV0IGdlZWYgdGVydWcgYWFuIHdlbGtlIChzdWIpdm9vcndhYXJkZW4gbmlldCB3b3JkdCB2b2xkYWFuLgpjb25zdCBhbmQgPSAoYnJvLCAuLi5hcmdzKSA9PiB7CiAgICBsZXQgdW5rbm93biA9IFtdOyAvL0FsbGVzIHdhdCBub2cgb25iZWtlbmQgaXMuCiAgICBsZXQgcHJvYmxlbXMgPSBbXTsgLy9BbGxlcyB3YWFyIG5pZXQgYWFuIHdvcmR0IHZvbGRhYW4uCiAgICBsZXQgcmVzdWx0ID0gdHJ1ZTsKICAgIGxldCBiYWROb25GdW5jdGlvbiA9IGZhbHNlOwogICAgLy9Wb29yIGFsbGUgYXJndW1lbnRlbiBraWprZW4gb2YgaGV0IGVlbiBzdWJmdW5jdGllIGlzIChkaWUgd29yZHQgdWl0Z2V2b2VyZCkgb2Ygb2YgaGV0IHZvbGRvZXQKICAgIGZvciAobGV0IGFyZyBvZiBhcmdzKSB7CiAgICAgICAgaWYgKHR5cGVvZiBhcmcgPT09ICJmdW5jdGlvbiIpIHsKICAgICAgICAgICAgY29uc3QgYXJnUmVzdWx0ID0gYXJnKCk7CiAgICAgICAgICAgIHVua25vd24ucHVzaCguLi5hcmdSZXN1bHQudW5rbm93bik7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goLi4uYXJnUmVzdWx0LnByb2JsZW1zKTsKICAgICAgICAgICAgYXJnID0gYXJnUmVzdWx0LnJlc3VsdDsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoYXJnICE9PSB0cnVlKSB7CiAgICAgICAgICAgIGJhZE5vbkZ1bmN0aW9uID0gdHJ1ZTsKICAgICAgICB9CiAgICAgICAgaWYgKGFyZyA9PT0gdW5kZWZpbmVkICYmIHJlc3VsdCAhPT0gZmFsc2UpIHsgLy9JbmZvcm1hdGllIG9udGJyZWVrdCBub2csIGR1cyBrYW4gbm9nIG5pZXQgZ29lZGtldXJlbgogICAgICAgICAgICByZXN1bHQgPSB1bmRlZmluZWQ7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKGFyZyA9PT0gZmFsc2UpIHsgLy9JbmZvcm1hdGllIGdlZWZ0IGFhbiBkYXQgZXIgbmlldCB3b3JkdCB2b2xkYWFuLCBvbmdlYWNodCBkZSByZXN0CiAgICAgICAgICAgIHJlc3VsdCA9IGZhbHNlOwogICAgICAgICAgICAvL1dlIHdpbGxlbiBpbiBkZSBmb3V0bWVsZGluZyB3ZWwgYWxsZXMgd2F0IGZvdXQgZ2FhdCwgZHVzIGdhIHZlcmRlcgogICAgICAgIH0KICAgIH0KICAgIC8vR2VlZiBkb29yIGFhbiB3ZWxrZSBvbmRlcmRlbGVuIG5pZXQgd29yZHQgdm9sZGFhbgogICAgaWYgKGJhZE5vbkZ1bmN0aW9uKSB7CiAgICAgICAgaWYgKHJlc3VsdCA9PT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgIHVua25vd24ucHVzaChicm8pOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChyZXN1bHQgPT09IGZhbHNlKSB7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goYnJvKTsKICAgICAgICB9CiAgICB9CiAgICBpZiAocmVzdWx0ID09PSB0cnVlKSB7CiAgICAgICAgdW5rbm93biA9IFtdOwogICAgICAgIHByb2JsZW1zID0gW107CiAgICB9CiAgICByZXR1cm4geyByZXN1bHQsIHVua25vd24sIHByb2JsZW1zIH07Cn07Ci8vS2lqayBvZiBpZXRzIGFhbiBlZW4gKHN1Yil2b29yd2FhcmRlbiB2b2xkb2V0LiBabyBuaWV0IGdlZWYgdGVydWcgYWFuIHdlbGtlIChzdWIpdm9vcndhYXJkZW4gbmlldCB3b3JkdCB2b2xkYWFuLgpjb25zdCBvciA9IChicm8sIC4uLmFyZ3MpID0+IHsKICAgIGxldCB1bmtub3duID0gW107IC8vQWxsZXMgd2F0IG5vZyBvbmJla2VuZCBpcy4KICAgIGxldCBwcm9ibGVtcyA9IFtdOyAvL0FsbGVzIHdhYXIgbmlldCBhYW4gd29yZHQgdm9sZGFhbi4KICAgIGxldCByZXN1bHQgPSBmYWxzZTsKICAgIGxldCBiYWROb25GdW5jdGlvbiA9IGZhbHNlOwogICAgLy9Wb29yIGFsbGUgYXJndW1lbnRlbiBraWprZW4gb2YgaGV0IGVlbiBzdWJmdW5jdGllIGlzIChkaWUgd29yZHQgdWl0Z2V2b2VyZCkgb2Ygb2YgaGV0IHZvbGRvZXQKICAgIGZvciAobGV0IGFyZyBvZiBhcmdzKSB7CiAgICAgICAgaWYgKHR5cGVvZiBhcmcgPT09ICJmdW5jdGlvbiIpIHsKICAgICAgICAgICAgY29uc3QgYXJnUmVzdWx0ID0gYXJnKCk7CiAgICAgICAgICAgIGFyZyA9IGFyZ1Jlc3VsdC5yZXN1bHQ7CiAgICAgICAgICAgIHVua25vd24ucHVzaCguLi5hcmdSZXN1bHQudW5rbm93bik7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goLi4uYXJnUmVzdWx0LnByb2JsZW1zKTsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoYXJnICE9PSB0cnVlKSB7CiAgICAgICAgICAgIGJhZE5vbkZ1bmN0aW9uID0gdHJ1ZTsKICAgICAgICB9CiAgICAgICAgaWYgKGFyZyA9PT0gdW5kZWZpbmVkKSB7IC8vSW5mb3JtYXRpZSBvbnRicmVla3Qgbm9nLCBkdXMga2FuIG5vZyBuaWV0IGdvZWRrZXVyZW4KICAgICAgICAgICAgcmVzdWx0ID0gdW5kZWZpbmVkOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChhcmcgPT09IHRydWUpIHsgLy9JbmZvcm1hdGllIGdlZWZ0IGFhbiBkYXQgZXIgYWFuIHdvcmR0IHZvbGRhYW4sIG9uZ2VhY2h0IGRlIHJlc3QKICAgICAgICAgICAgcmVzdWx0ID0gdHJ1ZTsKICAgICAgICAgICAgYnJlYWs7IC8vV2Ugd2V0ZW4gYWwgZGF0IGhldCB0b3RhYWwgZ29lZCBpcywgZHVzIGdhIG5pZXQgdmVyZGVyLgogICAgICAgIH0KICAgIH0KICAgIC8vR2VlZiBkb29yIGFhbiB3ZWxrZSBvbmRlcmRlbGVuIG5pZXQgd29yZHQgdm9sZGFhbgogICAgaWYgKGJhZE5vbkZ1bmN0aW9uKSB7CiAgICAgICAgaWYgKHJlc3VsdCA9PT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgIHVua25vd24ucHVzaChicm8pOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChyZXN1bHQgPT09IGZhbHNlKSB7CiAgICAgICAgICAgIHByb2JsZW1zLnB1c2goYnJvKTsKICAgICAgICB9CiAgICB9CiAgICBpZiAocmVzdWx0ID09PSB0cnVlKSB7CiAgICAgICAgdW5rbm93biA9IFtdOwogICAgICAgIHByb2JsZW1zID0gW107CiAgICB9CiAgICByZXR1cm4geyByZXN1bHQsIHVua25vd24sIHByb2JsZW1zIH07Cn07Ci8vS2lqayBvZiBpZXRzIGVyZ2VucyBhYW4gdm9sZG9ldC4KY29uc3QgY29tcGFyZSA9IChicm8sIGNvbXAsIGEsIGIpID0+IHsKICAgIGxldCB1bmtub3duID0gW107IC8vQWxsZXMgd2F0IG5vZyBvbmJla2VuZCBpcy4KICAgIGxldCBwcm9ibGVtcyA9IFtdOyAvL0FsbGVzIHdhYXIgbmlldCBhYW4gd29yZHQgdm9sZGFhbi4KICAgIGxldCByZXN1bHQ7CiAgICBpZiAodHlwZW9mIGEgPT09ICJmdW5jdGlvbiIpIHsKICAgICAgICBjb25zdCB0ZW1wYSA9IGEoKTsKICAgICAgICBhID0gdGVtcGEucmVzdWx0OwogICAgICAgIHVua25vd24ucHVzaCguLi50ZW1wYS51bmtub3duKTsKICAgICAgICBwcm9ibGVtcy5wdXNoKC4uLnRlbXBhLnByb2JsZW1zKTsKICAgIH0KICAgIGlmICh0eXBlb2YgYiA9PT0gImZ1bmN0aW9uIikgewogICAgICAgIGNvbnN0IHRlbXBiID0gYigpOwogICAgICAgIGIgPSB0ZW1wYi5yZXN1bHQ7CiAgICAgICAgdW5rbm93bi5wdXNoKC4uLnRlbXBiLnVua25vd24pOwogICAgICAgIHByb2JsZW1zLnB1c2goLi4udGVtcGIucHJvYmxlbXMpOwogICAgfQogICAgaWYgKGEgIT09IHVuZGVmaW5lZCAmJiBiICE9PSB1bmRlZmluZWQpIHsKICAgICAgICByZXN1bHQgPSBjb21wKGEsIGIpOwogICAgfQogICAgaWYgKHJlc3VsdCA9PT0gdHJ1ZSkgewogICAgICAgIHVua25vd24gPSBbXTsKICAgICAgICBwcm9ibGVtcyA9IFtdOwogICAgfQogICAgZWxzZSBpZiAocmVzdWx0ID09PSBmYWxzZSkgewogICAgICAgIHByb2JsZW1zLnB1c2goYnJvKTsKICAgIH0KICAgIGVsc2UgewogICAgICAgIHVua25vd24ucHVzaChicm8pOwogICAgfQogICAgcmV0dXJuIHsgcmVzdWx0LCB1bmtub3duLCBwcm9ibGVtcyB9Owp9OwppZiAocGF5bG9hZC5qYWFyID4gMjE0NzQ4MzY0NykgewogICAgcmV0dXJuICJPbmdlbGRpZyBqYWFyLiI7Cn0KY29uc3QgYWFudnJhZ2VyID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAiZG9jZW50ZW4iLCAiV0hFUkUgaWQgPSAkMTsiLCBbZnJvbV0pKS5yb3dzWzBdOwppZiAoYWFudnJhZ2VyID09PSB1bmRlZmluZWQpIHsKICAgIHJldHVybiAiQWxsZWVuIGRvY2VudGVuIGt1bm5lbiBlZW4gdmVybG9mIGFhbnZyYWFnIGluZGllbmVuIHZvb3IgaHVuIHdlcmtnZXZlci4iOwp9CmNvbnN0IHN1YnNpZGllQWFudnJhYWcgPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJzdWJzaWRpZXMiLCAiV0hFUkUgZG9jZW50ID0gJDEgQU5EIGphYXIgPSAkMiBBTkQgZ2Vhbm51bGVlcmQgPSBmYWxzZTsiLCBbZnJvbSwgcGF5bG9hZC5qYWFyXSkpLnJvd3NbMF07CmxldCBvcGxlaWRpbmdWYW5BYW52cmFhZzsKaWYgKHN1YnNpZGllQWFudnJhYWcgIT09IHVuZGVmaW5lZCkgewogICAgb3BsZWlkaW5nVmFuQWFudnJhYWcgPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJvcGxlaWRpbmdlbiIsICJXSEVSRSBpZCA9ICQxOyIsIFtzdWJzaWRpZUFhbnZyYWFnLm9wbGVpZGluZ10pKS5yb3dzWzBdOwp9Ci8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwovLyBCNDAyCi8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwovL0I0MDIuQlIwMgpsZXQgbWF4VmVyZ29lZGVuVmVybG9mdXJlbjsKaWYgKG9wbGVpZGluZ1ZhbkFhbnZyYWFnICE9PSB1bmRlZmluZWQpIHsKICAgIGlmIChvcGxlaWRpbmdWYW5BYW52cmFhZy5laWdlbnNjaGFwcGVuLmJhY2hlbG9yID09PSB0cnVlKSB7CiAgICAgICAgbWF4VmVyZ29lZGVuVmVybG9mdXJlbiA9IDE2MDsKICAgIH0KICAgIGVsc2UgaWYgKG9wbGVpZGluZ1ZhbkFhbnZyYWFnLmVpZ2Vuc2NoYXBwZW4uZGVmaWNpw6tudGllb3BsZWlkaW5nID09PSB0cnVlKSB7CiAgICAgICAgbWF4VmVyZ29lZGVuVmVybG9mdXJlbiA9IDE2MDsKICAgIH0KICAgIGVsc2UgaWYgKG9wbGVpZGluZ1ZhbkFhbnZyYWFnLmVpZ2Vuc2NoYXBwZW4ubWFzdGVyID09PSB0cnVlKSB7CiAgICAgICAgaWYgKGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIlBPIikgewogICAgICAgICAgICBtYXhWZXJnb2VkZW5WZXJsb2Z1cmVuID0gMzIwOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChhYW52cmFnZXIuZWlnZW5zY2hhcHBlbi5zZWN0b3IgPT09ICJQU08iKSB7CiAgICAgICAgICAgIG1heFZlcmdvZWRlblZlcmxvZnVyZW4gPSAzMjA7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIlZTTyIpIHsKICAgICAgICAgICAgbWF4VmVyZ29lZGVuVmVybG9mdXJlbiA9IDMyMDsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uc2VjdG9yID09PSAiVk8iKSB7CiAgICAgICAgICAgIG1heFZlcmdvZWRlblZlcmxvZnVyZW4gPSAyNDA7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIkJWRSIpIHsKICAgICAgICAgICAgbWF4VmVyZ29lZGVuVmVybG9mdXJlbiA9IDI0MDsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uc2VjdG9yID09PSAiSEJPIikgewogICAgICAgICAgICBtYXhWZXJnb2VkZW5WZXJsb2Z1cmVuID0gMzIwOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgLy9PbmJla2VuZAogICAgICAgIH0KICAgIH0KICAgIGVsc2UgewogICAgICAgIC8vT25iZWtlbmQKICAgIH0KfQovL0I0MDIuQlIwMQpjb25zdCBzdHVkaWVWZXJsb2ZVcmVuID0gYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uZnRlID09PSB1bmRlZmluZWQgfHwgbWF4VmVyZ29lZGVuVmVybG9mdXJlbiA9PT0gdW5kZWZpbmVkID8gdW5kZWZpbmVkIDoKICAgIG1heFZlcmdvZWRlblZlcmxvZnVyZW4gKiAvL0I0MDIuQlIwMS4yCiAgICAgICAgYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uZnRlOyAvL0I0MDIuQlIwMS4xCi8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwovLyBCNDAzCi8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwovL0I0MDMuQlIwMi1CUjA4CmNvbnN0IHN1YnNpZGllVGFyaWVmID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAidGFyaWVmIiwgIldIRVJFIHNlY3RvciA9ICQxIEFORCBqYWFyID0gJDI7IiwgW2FhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciwgcGF5bG9hZC5qYWFyXSkpLnJvd3NbMF07Ci8vQjQwMy5CUjAxCmNvbnN0IG1heGltYWFsU3Vic2lkaWViZWRyYWdDZW50ZW4gPSBzdHVkaWVWZXJsb2ZVcmVuID09PSB1bmRlZmluZWQgfHwgc3Vic2lkaWVUYXJpZWYgPT09IHVuZGVmaW5lZCA/IHVuZGVmaW5lZCA6CiAgICBNYXRoLnJvdW5kKHN1YnNpZGllVGFyaWVmLnRhcmllZl9jZW50ZW4gKiAvL0I0MDMuQlIwMi4xCiAgICAgICAgc3R1ZGllVmVybG9mVXJlbik7IC8vQjQwMy5CUjAyLjIKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCi8vIEI0MDEKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCmNvbnN0IGNvcnJlY3RTdWJzaWRpZVZlcmxlZW50ID0gKCkgPT4gb3IoIkI0MDEuQlIwMiIsIHN1YnNpZGllQWFudnJhYWcgIT09IHVuZGVmaW5lZCwgLy9CNDAxLkJSMDIuMQovL1dlIHJlZ2lzdHJlcmVuIG9vayBzdWJzaWRpZWFhbnZyYWdlbiB2b29yIOKCrDAKc3Vic2lkaWVBYW52cmFhZyAhPT0gdW5kZWZpbmVkICYmIHN1YnNpZGllQWFudnJhYWcuYmVkcmFnX2NlbnRlbiA9PT0gMCAvL0I0MDEuQlIwMi4yCik7CmNvbnN0IHJlY2h0T3BTdHVkaWVWZXJsb2YgPSAoKSA9PiBhbmQoIkI0MDEuQlIwMSIsIGFhbnZyYWdlci53ZXJrZ2V2ZXIgIT09IHVuZGVmaW5lZCwgLy9CNDAxLkJSMDEuMQpjb3JyZWN0U3Vic2lkaWVWZXJsZWVudCAvL0I0MDEuQlIwMS4yCik7Ci8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwovLyBSZXN1bHRhYXQKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCi8vRXh0cmE6IE1vZXQgYmlubmVuIGJ1ZGdldCB2YWxsZW4KY29uc3QgYnVkZ2V0U2VjdG9yID0gYWFudnJhZ2VyLmVpZ2Vuc2NoYXBwZW4uc2VjdG9yID09PSAiUE8iIHx8IGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIlBTTyIKICAgIHx8IGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvciA9PT0gIlZTTyIgPyAiUE9lblBTT2VuVlNPIiA6IGFhbnZyYWdlci5laWdlbnNjaGFwcGVuLnNlY3RvcjsKY29uc3QgYnVkZ2V0ID0gKGF3YWl0IHF1ZXJ5KCJTRUxFQ1QiLCAiYnVkZ2V0IiwgIldIRVJFIGphYXIgPSAkMSBBTkQgc2VjdG9yID0gJDI7IiwgW3BheWxvYWQuamFhciwgYnVkZ2V0U2VjdG9yXSkpLnJvd3NbMF07CmxldCBiZXNjaGlrYmFyZUJ1ZGdldENlbnRlbjsKaWYgKGJ1ZGdldCAhPT0gdW5kZWZpbmVkICYmIHN1YnNpZGllQWFudnJhYWcgIT09IHVuZGVmaW5lZCkgewogICAgaWYgKHN1YnNpZGllQWFudnJhYWcudmVydm9sZ19hYW52cmFhZykgewogICAgICAgIC8vSXMgZWVuIHZlcnZvbGcgYWFudnJhYWcsIHZvbGxlZGlnZSBidWRnZXQgaXMgYmVzY2hpa2JhYXIgKC0gd2F0IGlzIHVpdGdlZ2V2ZW4pCiAgICAgICAgYmVzY2hpa2JhcmVCdWRnZXRDZW50ZW4gPSBidWRnZXQuYmVzY2hpa2JhYXJfdG90YWFsX2NlbnRlbiAtIGJ1ZGdldC51aXRnZWdldmVuX3RvdGFhbF9jZW50ZW47CiAgICB9CiAgICBlbHNlIHsKICAgICAgICAvL0lzIGVlbiBuaWV1d2UgYWFudnJhYWcsIHZlcnZvbGcgYnVkZ2V0IHZhbiBoZXQgdG90YWFsIGFmIGhhbGVuCiAgICAgICAgYmVzY2hpa2JhcmVCdWRnZXRDZW50ZW4gPSAoYnVkZ2V0LmJlc2NoaWtiYWFyX3RvdGFhbF9jZW50ZW4gLSBidWRnZXQuYmVzY2hpa2JhYXJfdmVydm9sZ19jZW50ZW4pIC0KICAgICAgICAgICAgLy9HZWRlZWx0ZSB3YXQgbmlldCBhbCBpcyB1aXRnZWdldmVuLCBtYWFyIGFsbGVlbiB2b29yIHZlcnZvbGcgYmVzY2hpa2JhYXIgaXMuCiAgICAgICAgICAgIChidWRnZXQudWl0Z2VnZXZlbl90b3RhYWxfY2VudGVuIC0gYnVkZ2V0LnVpdGdlZ2V2ZW5fdmVydm9sZ19jZW50ZW4pOwogICAgfQp9CmNvbnN0IHRvZXdpanplbiA9IGFuZCgiQjQwNi5CUjAyIiwgcGF5bG9hZC5qYWFyID49IG5ldyBEYXRlKHByZXZpb3VzQmxvY2tUaW1lc3RhbXApLmdldFVUQ0Z1bGxZZWFyKCksIC8vQjQwNi5CUjAyLjE6IEIwMDEKcmVjaHRPcFN0dWRpZVZlcmxvZiwgLy9CNDA2LkJSMDIuMjogQjQwMQooKSA9PiBjb21wYXJlKCJCNDAzIiwgKGEsIGIpID0+IGEgPiBiLCBtYXhpbWFhbFN1YnNpZGllYmVkcmFnQ2VudGVuLCAwKSwgLy9CNDA2LkJSMDIuMzogQjQwMwovL0V4dHJhOiBNYWcgbWFhciAxIGtlZXIgKHBlciBqYWFyKQpzdWJzaWRpZUFhbnZyYWFnID09PSB1bmRlZmluZWQgPyB1bmRlZmluZWQgOiBzdWJzaWRpZUFhbnZyYWFnLnN0dWRpZXZlcmxvZl9hYW52cmFhZ3RpamQgPT09IG51bGwsIAovL0V4dHJhOiBNb2V0IGJpbm5lbiBidWRnZXQgdmFsbGVuCm1heGltYWFsU3Vic2lkaWViZWRyYWdDZW50ZW4gPT09IHVuZGVmaW5lZCB8fCBiZXNjaGlrYmFyZUJ1ZGdldENlbnRlbiA9PT0gdW5kZWZpbmVkID8KICAgIHVuZGVmaW5lZCA6IGJlc2NoaWtiYXJlQnVkZ2V0Q2VudGVuID49IG1heGltYWFsU3Vic2lkaWViZWRyYWdDZW50ZW4pOwppZiAodG9ld2lqemVuLnJlc3VsdCA9PT0gZmFsc2UpIHsKICAgIC8vRGUgYWFudnJhYWcgaXMgYWZnZXdlemVuIG9tIGRlIHZvbGdlbmRlIHJlZGVuZW46CiAgICByZXR1cm4gYEFmZ2V3ZXplbjogJHtBcnJheS5mcm9tKG5ldyBTZXQodG9ld2lqemVuLnByb2JsZW1zKSkudG9TdHJpbmcoKX1gOwp9CmVsc2UgaWYgKHRvZXdpanplbi5yZXN1bHQgPT09IHVuZGVmaW5lZCkgewogICAgLy9EZSB2b2xnZW5kZSBpbmZvcm1hdGllIGlzIG5vZyBvbmJla2VuZCwgZHVzIGthbiBub2cgbmlldCB3b3JkZW4gZ29lZGdla2V1cmQ6CiAgICByZXR1cm4gYE9udGJyZWVrdDogJHtBcnJheS5mcm9tKG5ldyBTZXQodG9ld2lqemVuLnVua25vd24pKS50b1N0cmluZygpfWA7Cn0KZWxzZSB7CiAgICAvL0RlIGFhbnZyYWFnIGlzIGdvZWdnZWtldXJkCiAgICBhd2FpdCBxdWVyeSgiVVBEQVRFIiwgInN1YnNpZGllcyIsICJTRVQgc3R1ZGlldmVybG9mX2FhbnZyYWFndGlqZCA9ICQzLCBzdHVkaWV2ZXJsb2ZfdXJlbiA9ICQ0LCAiICsKICAgICAgICAic3R1ZGlldmVybG9mX2JlZHJhZ2NlbnRlbiA9ICQ1IFdIRVJFIGRvY2VudCA9ICQxIEFORCBqYWFyID0gJDIgQU5EIGdlYW5udWxlZXJkID0gZmFsc2U7IiwgW2Zyb20sIHBheWxvYWQuamFhciwgcHJldmlvdXNCbG9ja1RpbWVzdGFtcCwgc3R1ZGllVmVybG9mVXJlbiwgbWF4aW1hYWxTdWJzaWRpZWJlZHJhZ0NlbnRlbl0pOwogICAgYXdhaXQgcXVlcnkoIlVQREFURSIsICJidWRnZXQiLCAiU0VUIHVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbiA9IHVpdGdlZ2V2ZW5fdG90YWFsX2NlbnRlbiArICQzLCAiICsKICAgICAgICAidWl0Z2VnZXZlbl92ZXJ2b2xnX2NlbnRlbiA9IEdSRUFURVNUKHVpdGdlZ2V2ZW5fdmVydm9sZ19jZW50ZW4gKyAkNCwgYmVzY2hpa2JhYXJfdmVydm9sZ19jZW50ZW4pICIgKwogICAgICAgICJXSEVSRSBqYWFyID0gJDEgQU5EIHNlY3RvciA9ICQyOyIsIFtwYXlsb2FkLmphYXIsIGJ1ZGdldFNlY3RvciwgbWF4aW1hYWxTdWJzaWRpZWJlZHJhZ0NlbnRlbiwgc3Vic2lkaWVBYW52cmFhZy52ZXJ2b2xnX2FhbnZyYWFnID8gbWF4aW1hYWxTdWJzaWRpZWJlZHJhZ0NlbnRlbiA6IDBdKTsKICAgIHJldHVybiAiT0siOwp9
+
+Init as text:
+
+Code as text:
+//Kijk of iets aan alle (sub)voorwaarden voldoet. Zo niet geef terug aan welke (sub)voorwaarden niet wordt voldaan.
+const and = (bro, ...args) => {
+    let unknown = []; //Alles wat nog onbekend is.
+    let problems = []; //Alles waar niet aan wordt voldaan.
+    let result = true;
+    let badNonFunction = false;
+    //Voor alle argumenten kijken of het een subfunctie is (die wordt uitgevoerd) of of het voldoet
+    for (let arg of args) {
+        if (typeof arg === "function") {
+            const argResult = arg();
+            unknown.push(...argResult.unknown);
+            problems.push(...argResult.problems);
+            arg = argResult.result;
+        }
+        else if (arg !== true) {
+            badNonFunction = true;
+        }
+        if (arg === undefined && result !== false) { //Informatie ontbreekt nog, dus kan nog niet goedkeuren
+            result = undefined;
+        }
+        else if (arg === false) { //Informatie geeft aan dat er niet wordt voldaan, ongeacht de rest
+            result = false;
+            //We willen in de foutmelding wel alles wat fout gaat, dus ga verder
+        }
+    }
+    //Geef door aan welke onderdelen niet wordt voldaan
+    if (badNonFunction) {
+        if (result === undefined) {
+            unknown.push(bro);
+        }
+        else if (result === false) {
+            problems.push(bro);
+        }
+    }
+    if (result === true) {
+        unknown = [];
+        problems = [];
+    }
+    return { result, unknown, problems };
+};
+//Kijk of iets aan een (sub)voorwaarden voldoet. Zo niet geef terug aan welke (sub)voorwaarden niet wordt voldaan.
+const or = (bro, ...args) => {
+    let unknown = []; //Alles wat nog onbekend is.
+    let problems = []; //Alles waar niet aan wordt voldaan.
+    let result = false;
+    let badNonFunction = false;
+    //Voor alle argumenten kijken of het een subfunctie is (die wordt uitgevoerd) of of het voldoet
+    for (let arg of args) {
+        if (typeof arg === "function") {
+            const argResult = arg();
+            arg = argResult.result;
+            unknown.push(...argResult.unknown);
+            problems.push(...argResult.problems);
+        }
+        else if (arg !== true) {
+            badNonFunction = true;
+        }
+        if (arg === undefined) { //Informatie ontbreekt nog, dus kan nog niet goedkeuren
+            result = undefined;
+        }
+        else if (arg === true) { //Informatie geeft aan dat er aan wordt voldaan, ongeacht de rest
+            result = true;
+            break; //We weten al dat het totaal goed is, dus ga niet verder.
+        }
+    }
+    //Geef door aan welke onderdelen niet wordt voldaan
+    if (badNonFunction) {
+        if (result === undefined) {
+            unknown.push(bro);
+        }
+        else if (result === false) {
+            problems.push(bro);
+        }
+    }
+    if (result === true) {
+        unknown = [];
+        problems = [];
+    }
+    return { result, unknown, problems };
+};
+//Kijk of iets ergens aan voldoet.
+const compare = (bro, comp, a, b) => {
+    let unknown = []; //Alles wat nog onbekend is.
+    let problems = []; //Alles waar niet aan wordt voldaan.
+    let result;
+    if (typeof a === "function") {
+        const tempa = a();
+        a = tempa.result;
+        unknown.push(...tempa.unknown);
+        problems.push(...tempa.problems);
+    }
+    if (typeof b === "function") {
+        const tempb = b();
+        b = tempb.result;
+        unknown.push(...tempb.unknown);
+        problems.push(...tempb.problems);
+    }
+    if (a !== undefined && b !== undefined) {
+        result = comp(a, b);
+    }
+    if (result === true) {
+        unknown = [];
+        problems = [];
+    }
+    else if (result === false) {
+        problems.push(bro);
+    }
+    else {
+        unknown.push(bro);
+    }
+    return { result, unknown, problems };
+};
+if (payload.jaar > 2147483647) {
+    return "Ongeldig jaar.";
+}
+const aanvrager = (await query("SELECT", "docenten", "WHERE id = $1;", [from])).rows[0];
+if (aanvrager === undefined) {
+    return "Alleen docenten kunnen een verlof aanvraag indienen voor hun werkgever.";
+}
+const subsidieAanvraag = (await query("SELECT", "subsidies", "WHERE docent = $1 AND jaar = $2 AND geannuleerd = false;", [from, payload.jaar])).rows[0];
+let opleidingVanAanvraag;
+if (subsidieAanvraag !== undefined) {
+    opleidingVanAanvraag = (await query("SELECT", "opleidingen", "WHERE id = $1;", [subsidieAanvraag.opleiding])).rows[0];
+}
+/////////////////////////////////////////////////////////////////////////////////
+// B402
+/////////////////////////////////////////////////////////////////////////////////
+//B402.BR02
+let maxVergoedenVerlofuren;
+if (opleidingVanAanvraag !== undefined) {
+    if (opleidingVanAanvraag.eigenschappen.bachelor === true) {
+        maxVergoedenVerlofuren = 160;
+    }
+    else if (opleidingVanAanvraag.eigenschappen.deficiëntieopleiding === true) {
+        maxVergoedenVerlofuren = 160;
+    }
+    else if (opleidingVanAanvraag.eigenschappen.master === true) {
+        if (aanvrager.eigenschappen.sector === "PO") {
+            maxVergoedenVerlofuren = 320;
+        }
+        else if (aanvrager.eigenschappen.sector === "PSO") {
+            maxVergoedenVerlofuren = 320;
+        }
+        else if (aanvrager.eigenschappen.sector === "VSO") {
+            maxVergoedenVerlofuren = 320;
+        }
+        else if (aanvrager.eigenschappen.sector === "VO") {
+            maxVergoedenVerlofuren = 240;
+        }
+        else if (aanvrager.eigenschappen.sector === "BVE") {
+            maxVergoedenVerlofuren = 240;
+        }
+        else if (aanvrager.eigenschappen.sector === "HBO") {
+            maxVergoedenVerlofuren = 320;
+        }
+        else {
+            //Onbekend
+        }
+    }
+    else {
+        //Onbekend
+    }
+}
+//B402.BR01
+const studieVerlofUren = aanvrager.eigenschappen.fte === undefined || maxVergoedenVerlofuren === undefined ? undefined :
+    maxVergoedenVerlofuren * //B402.BR01.2
+        aanvrager.eigenschappen.fte; //B402.BR01.1
+/////////////////////////////////////////////////////////////////////////////////
+// B403
+/////////////////////////////////////////////////////////////////////////////////
+//B403.BR02-BR08
+const subsidieTarief = (await query("SELECT", "tarief", "WHERE sector = $1 AND jaar = $2;", [aanvrager.eigenschappen.sector, payload.jaar])).rows[0];
+//B403.BR01
+const maximaalSubsidiebedragCenten = studieVerlofUren === undefined || subsidieTarief === undefined ? undefined :
+    Math.round(subsidieTarief.tarief_centen * //B403.BR02.1
+        studieVerlofUren); //B403.BR02.2
+/////////////////////////////////////////////////////////////////////////////////
+// B401
+/////////////////////////////////////////////////////////////////////////////////
+const correctSubsidieVerleent = () => or("B401.BR02", subsidieAanvraag !== undefined, //B401.BR02.1
+//We registreren ook subsidieaanvragen voor €0
+subsidieAanvraag !== undefined && subsidieAanvraag.bedrag_centen === 0 //B401.BR02.2
+);
+const rechtOpStudieVerlof = () => and("B401.BR01", aanvrager.werkgever !== undefined, //B401.BR01.1
+correctSubsidieVerleent //B401.BR01.2
+);
+/////////////////////////////////////////////////////////////////////////////////
+// Resultaat
+/////////////////////////////////////////////////////////////////////////////////
+//Extra: Moet binnen budget vallen
+const budgetSector = aanvrager.eigenschappen.sector === "PO" || aanvrager.eigenschappen.sector === "PSO"
+    || aanvrager.eigenschappen.sector === "VSO" ? "POenPSOenVSO" : aanvrager.eigenschappen.sector;
+const budget = (await query("SELECT", "budget", "WHERE jaar = $1 AND sector = $2;", [payload.jaar, budgetSector])).rows[0];
+let beschikbareBudgetCenten;
+if (budget !== undefined && subsidieAanvraag !== undefined) {
+    if (subsidieAanvraag.vervolg_aanvraag) {
+        //Is een vervolg aanvraag, volledige budget is beschikbaar (- wat is uitgegeven)
+        beschikbareBudgetCenten = budget.beschikbaar_totaal_centen - budget.uitgegeven_totaal_centen;
+    }
+    else {
+        //Is een nieuwe aanvraag, vervolg budget van het totaal af halen
+        beschikbareBudgetCenten = (budget.beschikbaar_totaal_centen - budget.beschikbaar_vervolg_centen) -
+            //Gedeelte wat niet al is uitgegeven, maar alleen voor vervolg beschikbaar is.
+            (budget.uitgegeven_totaal_centen - budget.uitgegeven_vervolg_centen);
+    }
+}
+const toewijzen = and("B406.BR02", payload.jaar >= new Date(previousBlockTimestamp).getUTCFullYear(), //B406.BR02.1: B001
+rechtOpStudieVerlof, //B406.BR02.2: B401
+() => compare("B403", (a, b) => a > b, maximaalSubsidiebedragCenten, 0), //B406.BR02.3: B403
+//Extra: Mag maar 1 keer (per jaar)
+subsidieAanvraag === undefined ? undefined : subsidieAanvraag.studieverlof_aanvraagtijd === null, 
+//Extra: Moet binnen budget vallen
+maximaalSubsidiebedragCenten === undefined || beschikbareBudgetCenten === undefined ?
+    undefined : beschikbareBudgetCenten >= maximaalSubsidiebedragCenten);
+if (toewijzen.result === false) {
+    //De aanvraag is afgewezen om de volgende redenen:
+    return `Afgewezen: ${Array.from(new Set(toewijzen.problems)).toString()}`;
+}
+else if (toewijzen.result === undefined) {
+    //De volgende informatie is nog onbekend, dus kan nog niet worden goedgekeurd:
+    return `Ontbreekt: ${Array.from(new Set(toewijzen.unknown)).toString()}`;
+}
+else {
+    //De aanvraag is goeggekeurd
+    await query("UPDATE", "subsidies", "SET studieverlof_aanvraagtijd = $3, studieverlof_uren = $4, " +
+        "studieverlof_bedragcenten = $5 WHERE docent = $1 AND jaar = $2 AND geannuleerd = false;", [from, payload.jaar, previousBlockTimestamp, studieVerlofUren, maximaalSubsidiebedragCenten]);
+    await query("UPDATE", "budget", "SET uitgegeven_totaal_centen = uitgegeven_totaal_centen + $3, " +
+        "uitgegeven_vervolg_centen = GREATEST(uitgegeven_vervolg_centen + $4, beschikbaar_vervolg_centen) " +
+        "WHERE jaar = $1 AND sector = $2;", [payload.jaar, budgetSector, maximaalSubsidiebedragCenten, subsidieAanvraag.vervolg_aanvraag ? maximaalSubsidiebedragCenten : 0]);
+    return "OK";
+}

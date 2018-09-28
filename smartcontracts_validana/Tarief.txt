@@ -1,0 +1,30 @@
+Type: Tarief
+Version: 1.0
+Description: Duo past tarief voor subsidie aan.
+Template: {"jaar":{"type":"uint","desc":"Het jaar waarvoor dit tarief geldt.","name":"Jaar"},"sector":{"type":"str","desc":"Voor welke sector het geldt.","name":"Sector"},"uurTarief":{"type":"float","desc":"Tarfief wat geldt voor deze sector.","name":"Uur tarief"}}
+Init: YXdhaXQgcXVlcnkoIkNSRUFURSIsICJ0YXJpZWYiLCAiKGphYXIgSU5ULCBzZWN0b3IgVkFSQ0hBUigzMiksIHRhcmllZl9jZW50ZW4gQklHSU5UIE5PVCBOVUxMLCBQUklNQVJZIEtFWSAoamFhciwgc2VjdG9yKSk7IiwgW10pOw==
+Code: aWYgKHBheWxvYWQuamFhciA+IDIxNDc0ODM2NDcpIHsKICAgIHJldHVybiAiT25nZWxkaWcgamFhci4iOwp9CmNvbnN0IHV1clRhcmllZkNlbnRlbiA9IE1hdGgucm91bmQocGF5bG9hZC51dXJUYXJpZWYgKiAxMDApOwppZiAodXVyVGFyaWVmQ2VudGVuIDwgMCB8fCB1dXJUYXJpZWZDZW50ZW4gPT09IEluZmluaXR5KSB7CiAgICByZXR1cm4gIk9uZ2VsZGlnZSB0YXJpZWYiOwp9CmNvbnN0IHNlY3RvciA9IHBheWxvYWQuc2VjdG9yOwppZiAoc2VjdG9yICE9PSAiVk8iICYmIHNlY3RvciAhPT0gIkJWRSIgJiYgc2VjdG9yICE9PSAiSEJPIiAmJiBzZWN0b3IgIT09ICJQTyIgJiYgc2VjdG9yICE9PSAiUFNPIiAmJiBzZWN0b3IgIT09ICJWU08iKSB7CiAgICByZXR1cm4gIk9uZ2VsZGlnZSBzZWN0b3IiOwp9Ci8vQWxsZWVuIGR1byBtYWcgdGFyaWVmIGFhbnBhc3Nlbgpjb25zdCBkdW8gPSAoYXdhaXQgcXVlcnkoIlNFTEVDVCIsICJlbnRpdGVpdGVuIiwgIldIRVJFIGlkID0gJ0RVTyc7IiwgW10pKS5yb3dzWzBdOwppZiAoZHVvID09PSB1bmRlZmluZWQgfHwgZnJvbSAhPT0gZHVvLmFkZHJlc3MpIHsKICAgIHJldHVybiAiT25nZWxkaWdlIGdlYnJ1aWtlciI7Cn0KLy9UYXJpZWYgdG9ldm9lZ2VuIG9mIGFhbnBhc3NlbiAoYWFucGFzc2luZ2VuIGdlbGRlbiBhbGxlZW4gdm9vciBuaWV1d2UgYWFudnJhZ2VuKQphd2FpdCBxdWVyeSgiSU5TRVJUIiwgInRhcmllZiIsICIoamFhciwgc2VjdG9yLCB0YXJpZWZfY2VudGVuKSBWQUxVRVMgKCQxLCAkMiwgJDMpIE9OIENPTkZMSUNUIE9OIENPTlNUUkFJTlQgdGFyaWVmX3BrZXkgIiArCiAgICAiRE8gVVBEQVRFIFNFVCB0YXJpZWZfY2VudGVuID0gJDM7IiwgW3BheWxvYWQuamFhciwgc2VjdG9yLCB1dXJUYXJpZWZDZW50ZW5dKTsKcmV0dXJuICJPSyI7
+
+Init as text:
+await query("CREATE", "tarief", "(jaar INT, sector VARCHAR(32), tarief_centen BIGINT NOT NULL, PRIMARY KEY (jaar, sector));", []);
+Code as text:
+if (payload.jaar > 2147483647) {
+    return "Ongeldig jaar.";
+}
+const uurTariefCenten = Math.round(payload.uurTarief * 100);
+if (uurTariefCenten < 0 || uurTariefCenten === Infinity) {
+    return "Ongeldige tarief";
+}
+const sector = payload.sector;
+if (sector !== "VO" && sector !== "BVE" && sector !== "HBO" && sector !== "PO" && sector !== "PSO" && sector !== "VSO") {
+    return "Ongeldige sector";
+}
+//Alleen duo mag tarief aanpassen
+const duo = (await query("SELECT", "entiteiten", "WHERE id = 'DUO';", [])).rows[0];
+if (duo === undefined || from !== duo.address) {
+    return "Ongeldige gebruiker";
+}
+//Tarief toevoegen of aanpassen (aanpassingen gelden alleen voor nieuwe aanvragen)
+await query("INSERT", "tarief", "(jaar, sector, tarief_centen) VALUES ($1, $2, $3) ON CONFLICT ON CONSTRAINT tarief_pkey " +
+    "DO UPDATE SET tarief_centen = $3;", [payload.jaar, sector, uurTariefCenten]);
+return "OK";
